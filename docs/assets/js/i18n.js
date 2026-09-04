@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — SONG NGỮ EN / VI / JA
+   ZHR GLOBAL — SONG NGỮ EN / VI / JA
    - Tiếng Anh là bản gốc, nằm thẳng trong HTML (tốt cho SEO).
    - Tiếng Việt nằm trong data/vi.js, tiếng Nhật trong data/ja.js.
    - Đánh dấu phần cần dịch bằng data-i18n="key" trên thẻ HTML.

@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — 日本語翻訳
+   ZHR GLOBAL — 日本語翻訳
    Bản tiếng Nhật. Cấu trúc giống data/vi.js, cùng bộ key.
    Bỏ key = tự động rơi về tiếng Anh.
    Kiểm tra thiếu/thừa: node tools/check-i18n.js
@@ -12,7 +12,7 @@ window.VHR_JA = {
   "nav.home": "ホーム",
   "nav.solutions": "ソリューション",
   "nav.hire": "ベトナムでの採用",
-  "nav.why": "ZHR One を選ぶ理由",
+  "nav.why": "ZHR Global を選ぶ理由",
   "nav.intel": "ワークフォース・インテリジェンス",
   "nav.about": "会社概要",
   "a11y.skip": "本文へスキップ",
@@ -36,7 +36,7 @@ window.VHR_JA = {
   "label.02": "02 — ビジネス価値",
   "label.03": "03 — ソリューション",
   "label.04": "04 — テクノロジー人材",
-  "label.05": "05 — ZHR One を選ぶ理由",
+  "label.05": "05 — ZHR Global を選ぶ理由",
   "label.06": "06 — ワークフォース・インテリジェンス",
   "label.next": "次のステップ",
   "label.outcome": "成果",
@@ -46,7 +46,7 @@ window.VHR_JA = {
 
   /* ---------- CTA ---------- */
   "cta.talk": "お問い合わせ",
-  "cta.talkVhr": "ZHR One に相談する",
+  "cta.talkVhr": "ZHR Global に相談する",
   "cta.talkExpert": "ベトナム HR エキスパートに相談",
   "cta.talkWorkforce": "ワークフォース専門家に相談",
   "cta.buildTeam": "ベトナムでチームを構築する",
@@ -59,7 +59,7 @@ window.VHR_JA = {
   "cta.findTech": "IT 人材を探す",
   "cta.tellUs": "必要な人材を教えてください",
   "cta.discussModel": "採用モデルを相談する",
-  "cta.whyVhr": "ZHR One を選ぶ理由",
+  "cta.whyVhr": "ZHR Global を選ぶ理由",
   "cta.benchmark": "給与ベンチマークを依頼",
   "cta.joinExpert": "エキスパートネットワークに参加",
 
@@ -72,7 +72,7 @@ window.VHR_JA = {
   /* ---------- ホームページ ---------- */
   "home.hero.eyebrow": "ベトナムのワークフォース &amp; HR パートナー",
   "home.hero.h1": "ベトナムで正しいチームを構築する。",
-  "home.hero.sub": "より速く、よりリーンに、ローカルの知見と共に。ZHR One は、海外企業のベトナム人材アクセス、高パフォーマンスなチーム構築、そしてワークフォース運用を、戦略から実行まで一貫して支援します。",
+  "home.hero.sub": "より速く、よりリーンに、ローカルの知見と共に。ZHR Global は、海外企業のベトナム人材アクセス、高パフォーマンスなチーム構築、そしてワークフォース運用を、戦略から実行まで一貫して支援します。",
   "home.hero.side": "労働市場の理解、組織設計、採用、現地での HR 運用まで、ワークフォースの全ジャーニーを担う一つのローカルパートナー。",
   "home.brings.h2": "ベトナムでの目的は何ですか?",
   "home.brings.lead": "よくある三つの出発点。もっとも近いものを選んでください。残りは私たちが担当します。",
@@ -212,10 +212,10 @@ window.VHR_JA = {
   "hire.cta.h2": "必要な人材を教えてください。",
   "hire.cta.lead": "ポジション、チーム規模、期待するタイムラインを共有してください。現実的な市場ビューをお返しします。",
 
-  /* ---------- Why ZHR One ページ ---------- */
-  "why.hero.eyebrow": "ZHR One を選ぶ理由",
+  /* ---------- Why ZHR Global ページ ---------- */
+  "why.hero.eyebrow": "ZHR Global を選ぶ理由",
   "why.hero.h1": "戦略は実行されて初めて価値を持つ。",
-  "why.hero.lead": "ZHR One は、ベトナムのワークフォース・インテリジェンス、上級 HR エキスパート、そして実行力を組み合わせます。",
+  "why.hero.lead": "ZHR Global は、ベトナムのワークフォース・インテリジェンス、上級 HR エキスパート、そして実行力を組み合わせます。",
   "why.local.h2": "ローカルの知見でベトナムを進む。",
   "why.local.lead": "ベトナムの人材に関する判断は、グローバル・テンプレートを当てはめると外れがち。私たちは現地市場の実態から出発します。",
   "why.local.list": "<li>人材市場</li><li>報酬水準</li><li>トータルリワード</li><li>組織構造</li><li>労使関係</li><li>HR プラクティス</li><li>IT 人材</li>",
@@ -243,11 +243,11 @@ window.VHR_JA = {
   "ex.5": "最適化",
 
   /* ---------- About ページ ---------- */
-  "about.hero.eyebrow": "ZHR One について",
+  "about.hero.eyebrow": "ZHR Global について",
   "about.hero.h1": "ベトナムの専門性。グローバル基準。",
-  "about.hero.lead": "ZHR One は、海外企業がベトナムのワークフォースを理解し、安心してアクセスすることを支援します。",
+  "about.hero.lead": "ZHR Global は、海外企業がベトナムのワークフォースを理解し、安心してアクセスすることを支援します。",
   "about.who.h2": "ベトナムのワークフォース &amp; HR パートナー。",
-  "about.who.p1": "ZHR One は、ベトナム進出、現地チーム構築、世界からのベトナム人材アクセスを支援する、ベトナム拠点の HR・ワークフォース・ソリューション・パートナーです。",
+  "about.who.p1": "ZHR Global は、ベトナム進出、現地チーム構築、世界からのベトナム人材アクセスを支援する、ベトナム拠点の HR・ワークフォース・ソリューション・パートナーです。",
   "about.who.p2": "社内 HR リーダーシップ・チームと同じ働き方を取ります。まず事業ニーズを理解し、その上で設計、採用、運用を組み立てます。",
   "about.approach.h2": "私たちの働き方",
   "about.approach.lead": "すべてのエンゲージメントの進め方を決める六つの原則。",
@@ -312,7 +312,7 @@ window.VHR_JA = {
   /* ---------- Talk to Us ---------- */
   "talk.hero.eyebrow": "お問い合わせ",
   "talk.hero.h1": "ベトナムチームを一緒に構築しましょう。",
-  "talk.hero.lead": "ご計画とサポートが必要な領域を教えてください。ZHR One のエキスパートから直接ご返信します。",
+  "talk.hero.lead": "ご計画とサポートが必要な領域を教えてください。ZHR Global のエキスパートから直接ご返信します。",
   "talk.step1": "ステップ 1 — 何をされたいですか?",
   "talk.step2": "ステップ 2 — ニーズを教えてください",
   "intent.enter": "ベトナム進出",
@@ -338,10 +338,10 @@ window.VHR_JA = {
   "form.roles.ph": "例: シニア・バックエンド 2 名、QA リード 1 名",
   "form.message": "メッセージ",
   "form.message.ph": "何を計画されていますか。最初に何を正しく進める必要がありますか?",
-  "form.privacy": "送信により、ZHR One がお問い合わせ内容についてご連絡することに同意されたものとみなします。個人情報を販売することはありません。",
+  "form.privacy": "送信により、ZHR Global がお問い合わせ内容についてご連絡することに同意されたものとみなします。個人情報を販売することはありません。",
   "talk.next.eyebrow": "次に何が起きるか?",
   "talk.next.1": "ご依頼内容を確認します。",
-  "talk.next.2": "ZHR One のエキスパートからご連絡します。",
+  "talk.next.2": "ZHR Global のエキスパートからご連絡します。",
   "talk.next.3": "ワークフォース・ニーズを明確化し、次のステップを提案します。",
   "talk.direct.eyebrow": "直接のお問い合わせ",
   "talk.direct.body": "Email: hello@zhrone.com<br>ホーチミン市、ベトナム",

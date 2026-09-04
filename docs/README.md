@@ -1,4 +1,4 @@
-# ZHR One — Website MVP
+# ZHR Global — Website MVP
 
 Static site: HTML + CSS + JavaScript thuần. Không cần build tool, không cần Node để chạy.
 Mở `index.html` bằng trình duyệt là xem được ngay.
@@ -12,7 +12,7 @@ docs/
 ├── index.html                     Trang chủ
 ├── solutions.html                 Giải pháp
 ├── hire-in-vietnam.html           Tuyển dụng tại Việt Nam
-├── why-zhr-one.html               Vì sao chọn ZHR One
+├── why-zhr-global.html               Vì sao chọn ZHR Global
 ├── workforce-intelligence.html    Danh sách bài chuyên môn
 ├── insight-tech-team-cost.html    Mẫu trang bài viết chi tiết
 ├── about.html                     Về chúng tôi

@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — DESIGN TOKENS
+   ZHR GLOBAL — DESIGN TOKENS
    Sửa thương hiệu ở đây là toàn site đổi theo.
    ========================================================= */
 :root {
@@ -27,7 +27,7 @@
   --c-on-dark-line:   #FFFFFF1F;
 
   /* --- Typography --------------------------------------- */
-  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", "Charter", "Georgia", serif;
   --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --text-micro: 0.6875rem;
@@ -44,7 +44,7 @@
   --leading-tight: 1.06;
   --leading-snug:  1.22;
   --leading-body:  1.62;
-  --track-label:   0.14em;
+  --track-label:   0.16em;
 
   /* --- Spacing & layout --------------------------------- */
   --space-1: 0.25rem;

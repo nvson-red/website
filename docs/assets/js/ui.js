@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — HÀNH VI CỦA HEADER (menu mobile, viền khi cuộn, năm)
+   ZHR GLOBAL — HÀNH VI CỦA HEADER (menu mobile, viền khi cuộn, năm)
    Nội dung header/footer nằm ở partials/ và đã được ghi thẳng vào HTML.
    ========================================================= */
 (function () {

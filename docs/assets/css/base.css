@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — BASE / RESET / TYPOGRAPHY
+   ZHR GLOBAL — BASE / RESET / TYPOGRAPHY
    ========================================================= */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -25,18 +25,20 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.022em;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  letter-spacing: -0.012em;
   line-height: var(--leading-snug);
   color: var(--c-ink);
   margin: 0;
   text-wrap: balance;
 }
 
-h1 { font-size: var(--text-h1); line-height: var(--leading-tight); letter-spacing: -0.032em; }
-h2 { font-size: var(--text-h2); line-height: 1.1; letter-spacing: -0.028em; }
-h3 { font-size: var(--text-h3); }
-h4 { font-size: var(--text-h4); }
+/* Serif Fraunces đọc "chững" hơn với weight 500 ở tít lớn, 600 ở tít nhỏ */
+h1 { font-size: var(--text-h1); line-height: var(--leading-tight); letter-spacing: -0.022em; font-weight: 500; }
+h2 { font-size: var(--text-h2); line-height: 1.08; letter-spacing: -0.018em; font-weight: 500; }
+h3 { font-size: var(--text-h3); font-weight: 600; letter-spacing: -0.01em; }
+h4 { font-size: var(--text-h4); font-weight: 600; letter-spacing: -0.006em; }
 
 p { margin: 0 0 var(--space-4); }
 p:last-child { margin-bottom: 0; }

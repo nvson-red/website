@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — DỮ LIỆU WORKFORCE INTELLIGENCE
+   ZHR GLOBAL — DỮ LIỆU WORKFORCE INTELLIGENCE
    Thêm bài mới: copy một khối {...} và sửa nội dung.
    Trước khi có CMS, đây là nơi duy nhất cần sửa.
    categories: build | talent | salary | tech | employment | strategy
@@ -27,7 +27,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "Chi phí thực sự để xây một đội ngũ công nghệ tại Việt Nam là bao nhiêu?",
       teaser: "Salary is only part of the number. A practical breakdown of total workforce cost for a 10-person engineering team.",
       teaserVi: "Lương chỉ là một phần. Bóc tách chi phí nhân sự tổng thể cho một đội kỹ thuật 10 người.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2026-02-18",
       readMinutes: 9,
       cover: "01"
@@ -41,7 +41,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "Báo cáo lương ngành công nghệ Việt Nam",
       teaser: "Compensation ranges by role, seniority and location — and how to read them before you set a budget.",
       teaserVi: "Khoảng lương theo vị trí, cấp bậc và khu vực — và cách đọc dữ liệu trước khi chốt ngân sách.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2026-01-30",
       readMinutes: 12,
       cover: "02"
@@ -55,7 +55,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "20 nhân sự đầu tiên tại Việt Nam: cơ cấu tổ chức nên như thế nào?",
       teaser: "The sequence of roles that keeps an early Vietnam team lean without creating gaps in capability.",
       teaserVi: "Thứ tự tuyển dụng giúp đội ngũ giai đoạn đầu gọn nhẹ mà không thiếu năng lực cốt lõi.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2026-01-12",
       readMinutes: 8,
       cover: "03"
@@ -69,7 +69,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "Tuyển kỹ sư tại Việt Nam: điều gì thực sự tăng tỷ lệ nhận offer",
       teaser: "Interview speed, role clarity and total rewards matter more than brand recognition.",
       teaserVi: "Tốc độ phỏng vấn, sự rõ ràng của vị trí và tổng đãi ngộ quan trọng hơn độ nhận diện thương hiệu.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2025-12-08",
       readMinutes: 7,
       cover: "04"
@@ -83,7 +83,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "Những vấn đề lao động doanh nghiệp nước ngoài hỏi nhiều nhất",
       teaser: "Contracts, probation, social insurance and the operational habits that keep HR clean.",
       teaserVi: "Hợp đồng, thử việc, bảo hiểm xã hội và các thói quen vận hành giữ hồ sơ nhân sự sạch.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2025-11-20",
       readMinutes: 10,
       cover: "05"
@@ -97,7 +97,7 @@ window.VHR_INSIGHTS = (function () {
       titleVi: "Chính thức, remote hay fractional? Chọn cơ cấu nhân sự phù hợp",
       teaser: "A decision framework for balancing cost, control and speed across a growing Vietnam team.",
       teaserVi: "Khung ra quyết định cân bằng chi phí, khả năng kiểm soát và tốc độ khi mở rộng đội ngũ.",
-      author: "ZHR One Workforce Intelligence",
+      author: "ZHR Global Workforce Intelligence",
       date: "2025-10-29",
       readMinutes: 9,
       cover: "06"

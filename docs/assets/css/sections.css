@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR ONE — SECTION / PAGE-LEVEL LAYOUTS
+   ZHR GLOBAL — SECTION / PAGE-LEVEL LAYOUTS
    ========================================================= */
 
 /* ---------- Hero (trang chủ) ---------------------------- */
@@ -191,3 +191,38 @@
 /* Cột trái rộng hơn — dùng cho trang có form */
 .split--wide-left { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr); }
 @media (max-width: 900px) { .split--wide-left { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   FONT ROLES — serif ở tiêu đề, sans ở UI/label/micro copy.
+   Giữ tính chuyên nghiệp: serif cho gravitas, sans cho signage.
+   ========================================================= */
+.eyebrow,
+.btn,
+.brand__name,
+.nav__link,
+.card__num,
+.filter, .tag,
+.stat__label, .stat__source,
+.field label,
+.form-note, .breadcrumb,
+.lang-switch button,
+.hero__pillar,
+.process__step-label,
+.value-item__num,
+.mixbar__seg,
+.trust__logo, .trust__label,
+.insight__cat, .insight__meta,
+.article__meta,
+.footer__list a, .footer__bottom, .site-footer h4,
+.card__cta {
+  font-family: var(--font-body);
+}
+
+/* Wordmark: nét sans hiện đại, chữ số nét serif */
+.brand__name { font-weight: 700; letter-spacing: 0.06em; }
+
+/* Chữ số lớn trong stat vẫn dùng serif để mang cảm giác biên tập/tài liệu */
+.stat__value { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; }
+
+/* Nút Talk to Us cần cạnh gọn của sans */
+.btn { font-weight: 600; }
