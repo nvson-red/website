@@ -1,5 +1,5 @@
 /* =========================================================
-   VHR ONE — COMPONENTS
+   ZHR ONE — COMPONENTS
    ========================================================= */
 
 /* ---------- Buttons ------------------------------------- */
@@ -379,3 +379,78 @@
 .form-status { padding: var(--space-4); border-radius: var(--radius-sm); font-size: var(--text-sm); display: none; }
 .form-status.is-ok { display: block; background: rgba(14,158,150,0.1); border: 1px solid var(--c-accent); }
 .form-status.is-err { display: block; background: rgba(226,163,60,0.12); border: 1px solid var(--c-signal); }
+
+/* ---------- Icons ---------------------------------------- */
+.icon {
+  width: 22px; height: 22px; flex: none;
+  color: var(--c-accent-deep);
+  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.section--dark .icon { color: var(--c-accent-bright); }
+.icon--lg { width: 32px; height: 32px; }
+
+/* Ô vuông bo góc bọc icon — dùng trên card dịch vụ */
+.icon-tile {
+  width: 44px; height: 44px; border-radius: 10px; flex: none;
+  display: inline-grid; place-items: center;
+  background: rgba(14,158,150,0.10);
+  color: var(--c-accent-deep);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.icon-tile .icon { width: 22px; height: 22px; color: currentColor; }
+.card:hover .icon-tile { background: var(--c-accent); color: #fff; }
+.card--dark .icon-tile { background: rgba(25,198,180,0.16); color: var(--c-accent-bright); }
+.card--dark:hover .icon-tile { background: var(--c-accent-bright); color: var(--c-ink); }
+
+/* Nút chuyển ngôn ngữ rộng hơn khi có tiếng Nhật */
+.lang-switch button[data-lang="ja"] { font-family: var(--font-body); letter-spacing: 0; font-size: 0.7rem; }
+
+/* ---------- Trust bar (dải logo khách hàng) --------------- */
+.trust {
+  padding: clamp(2rem, 1.5rem + 2vw, 3rem) 0;
+  border-block: 1px solid var(--c-line);
+  background: var(--c-paper);
+}
+.trust__label {
+  font-family: var(--font-display);
+  font-size: var(--text-micro); font-weight: 700;
+  letter-spacing: var(--track-label); text-transform: uppercase;
+  color: var(--c-text-muted);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+.trust__row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: center;
+}
+.trust__logo {
+  height: 38px;
+  display: grid; place-items: center;
+  color: var(--c-text-muted);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.95rem; letter-spacing: -0.01em;
+  opacity: 0.72;
+  transition: opacity var(--dur) var(--ease), color var(--dur) var(--ease);
+  border-radius: 4px;
+}
+.trust__logo:hover { opacity: 1; color: var(--c-ink); }
+.trust__logo svg { width: 100%; height: 100%; }
+@media (max-width: 900px) { .trust__row { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 1.75rem; } }
+@media (max-width: 480px) { .trust__row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Font Nhật: giữ hệ system-Japanese để render đẹp trên Windows/mac */
+:root { --font-jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif; }
+html[lang="ja"] { --font-body: var(--font-jp); --font-display: var(--font-jp); }
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] h4 { letter-spacing: -0.005em; line-height: 1.35; }
+html[lang="ja"] .hero h1 { max-width: 22ch; }
+html[lang="ja"] .statement__text { font-size: clamp(2rem, 1.2rem + 3.5vw, 4rem); line-height: 1.35; max-width: 26ch; }
+
+/* Fix menu overflow ở bản tiếng Nhật (chữ dày hơn) */
+html[lang="ja"] .nav__link,
+html[lang="ja"] .site-header .btn { white-space: nowrap; }
+html[lang="ja"] .nav { gap: clamp(0.4rem, 1vw, 1rem); }
+html[lang="ja"] .nav__link { font-size: 0.82rem; }
+html[lang="ja"] .site-header .btn { font-size: 0.75rem; padding: 0.6rem 1rem; }
+html[lang="ja"] .lang-switch button { padding: 6px 8px; }

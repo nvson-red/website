@@ -1,16 +1,20 @@
 /* =========================================================
-   VHR ONE — BẢN DỊCH TIẾNG VIỆT
+   ZHR ONE — BẢN DỊCH TIẾNG VIỆT
    Tiếng Anh nằm trong file HTML. File này chỉ chứa tiếng Việt.
    Thêm/sửa: tìm đúng key rồi sửa chuỗi. Bỏ key = tự động dùng lại tiếng Anh.
    Kiểm tra thiếu key: node tools/check-i18n.js
    ========================================================= */
 window.VHR_VI = {
 
+  /* ---------- Trust bar ---------- */
+  "trust.label": "Được các doanh nghiệp quốc tế đang xây dựng đội ngũ tại Việt Nam tin dùng",
+  "trust.note": "Logo là placeholder — thay bằng logo khách hàng thật khi có sẵn.",
+
   /* ---------- Điều hướng & footer ---------- */
   "nav.home": "Trang chủ",
   "nav.solutions": "Giải pháp",
   "nav.hire": "Tuyển dụng tại Việt Nam",
-  "nav.why": "Vì sao chọn VHR One",
+  "nav.why": "Vì sao chọn ZHR One",
   "nav.intel": "Workforce Intelligence",
   "nav.about": "Về chúng tôi",
   "a11y.skip": "Tới nội dung chính",
@@ -34,7 +38,7 @@ window.VHR_VI = {
   "label.02": "02 — Giá trị kinh doanh",
   "label.03": "03 — Giải pháp",
   "label.04": "04 — Nhân sự công nghệ",
-  "label.05": "05 — Vì sao chọn VHR One",
+  "label.05": "05 — Vì sao chọn ZHR One",
   "label.06": "06 — Workforce Intelligence",
   "label.next": "Bước tiếp theo",
   "label.outcome": "Kết quả",
@@ -44,7 +48,7 @@ window.VHR_VI = {
 
   /* ---------- CTA ---------- */
   "cta.talk": "Liên hệ tư vấn",
-  "cta.talkVhr": "Trao đổi với VHR One",
+  "cta.talkVhr": "Trao đổi với ZHR One",
   "cta.talkExpert": "Nói chuyện với chuyên gia nhân sự Việt Nam",
   "cta.talkWorkforce": "Nói chuyện với chuyên gia nhân sự",
   "cta.buildTeam": "Xây dựng đội ngũ tại Việt Nam",
@@ -57,7 +61,7 @@ window.VHR_VI = {
   "cta.findTech": "Tìm nhân sự công nghệ",
   "cta.tellUs": "Cho chúng tôi biết bạn cần ai",
   "cta.discussModel": "Trao đổi về mô hình tuyển dụng",
-  "cta.whyVhr": "Vì sao chọn VHR One",
+  "cta.whyVhr": "Vì sao chọn ZHR One",
   "cta.benchmark": "Yêu cầu báo cáo lương",
   "cta.joinExpert": "Tham gia mạng lưới chuyên gia",
 
@@ -70,7 +74,7 @@ window.VHR_VI = {
   /* ---------- TRANG CHỦ ---------- */
   "home.hero.eyebrow": "Đối tác nhân sự &amp; workforce tại Việt Nam",
   "home.hero.h1": "Xây dựng đúng đội ngũ tại Việt Nam.",
-  "home.hero.sub": "Nhanh hơn. Gọn hơn. Với hiểu biết bản địa. VHR One giúp doanh nghiệp quốc tế tiếp cận nhân tài Việt Nam, xây dựng đội ngũ hiệu quả và quản trị nhân sự — từ chiến lược đến triển khai.",
+  "home.hero.sub": "Nhanh hơn. Gọn hơn. Với hiểu biết bản địa. ZHR One giúp doanh nghiệp quốc tế tiếp cận nhân tài Việt Nam, xây dựng đội ngũ hiệu quả và quản trị nhân sự — từ chiến lược đến triển khai.",
   "home.hero.side": "Một đối tác bản địa xuyên suốt hành trình nhân sự: hiểu thị trường, thiết kế tổ chức, tuyển đúng người và vận hành HR tại chỗ.",
   "home.brings.h2": "Điều gì đưa bạn đến Việt Nam?",
   "home.brings.lead": "Ba điểm xuất phát phổ biến. Chọn điểm gần nhất với kế hoạch của bạn, phần còn lại để chúng tôi lo.",
@@ -103,7 +107,7 @@ window.VHR_VI = {
   "home.intel.h2": "Vietnam Workforce Intelligence",
   "home.intel.lead": "Thông tin chuyên môn thực dụng cho doanh nghiệp đang xây dựng và vận hành đội ngũ tại Việt Nam.",
   "home.cta.h2": "Đang lên kế hoạch xây đội ngũ tại Việt Nam?",
-  "home.cta.lead": "Hãy cho chúng tôi biết kế hoạch của bạn. VHR One giúp bạn hiểu thị trường nhân tài, chi phí nhân sự và cách thực tế nhất để xây dựng đội ngũ.",
+  "home.cta.lead": "Hãy cho chúng tôi biết kế hoạch của bạn. ZHR One giúp bạn hiểu thị trường nhân tài, chi phí nhân sự và cách thực tế nhất để xây dựng đội ngũ.",
 
   /* ---------- Nhóm giải pháp (dùng chung) ---------- */
   "sol.build.t": "Xây dựng đội ngũ",
@@ -210,10 +214,10 @@ window.VHR_VI = {
   "hire.cta.h2": "Cho chúng tôi biết bạn cần gì.",
   "hire.cta.lead": "Chia sẻ vị trí, quy mô đội ngũ và thời gian dự kiến. Chúng tôi sẽ phản hồi bằng góc nhìn thị trường thực tế.",
 
-  /* ---------- TRANG WHY VHR ONE ---------- */
-  "why.hero.eyebrow": "Vì sao chọn VHR One",
+  /* ---------- TRANG WHY ZHR ONE ---------- */
+  "why.hero.eyebrow": "Vì sao chọn ZHR One",
   "why.hero.h1": "Chiến lược chỉ có giá trị khi được triển khai.",
-  "why.hero.lead": "VHR One kết hợp hiểu biết thị trường nhân lực Việt Nam, chuyên môn HR cấp cao và năng lực triển khai thực tế.",
+  "why.hero.lead": "ZHR One kết hợp hiểu biết thị trường nhân lực Việt Nam, chuyên môn HR cấp cao và năng lực triển khai thực tế.",
   "why.local.h2": "Đi đúng đường tại Việt Nam nhờ hiểu biết bản địa.",
   "why.local.lead": "Quyết định về con người tại Việt Nam thường sai khi áp khuôn mẫu toàn cầu. Chúng tôi làm việc dựa trên thực tế thị trường bản địa.",
   "why.local.list": "<li>Thị trường nhân tài</li><li>Mặt bằng lương</li><li>Total Rewards</li><li>Cơ cấu tổ chức</li><li>Quan hệ lao động</li><li>Thực hành HR</li><li>Nhân sự công nghệ</li>",
@@ -241,11 +245,11 @@ window.VHR_VI = {
   "ex.5": "Tối ưu",
 
   /* ---------- TRANG ABOUT ---------- */
-  "about.hero.eyebrow": "Về VHR One",
+  "about.hero.eyebrow": "Về ZHR One",
   "about.hero.h1": "Chuyên môn Việt Nam. Chuẩn mực quốc tế.",
-  "about.hero.lead": "VHR One giúp doanh nghiệp quốc tế hiểu và tiếp cận lực lượng lao động Việt Nam một cách vững vàng.",
+  "about.hero.lead": "ZHR One giúp doanh nghiệp quốc tế hiểu và tiếp cận lực lượng lao động Việt Nam một cách vững vàng.",
   "about.who.h2": "Đối tác nhân sự &amp; workforce của bạn tại Việt Nam.",
-  "about.who.p1": "VHR One là đối tác giải pháp nhân sự đặt tại Việt Nam, giúp doanh nghiệp quốc tế vào thị trường Việt Nam, xây dựng đội ngũ bản địa và tiếp cận nhân tài Việt trên phạm vi toàn cầu.",
+  "about.who.p1": "ZHR One là đối tác giải pháp nhân sự đặt tại Việt Nam, giúp doanh nghiệp quốc tế vào thị trường Việt Nam, xây dựng đội ngũ bản địa và tiếp cận nhân tài Việt trên phạm vi toàn cầu.",
   "about.who.p2": "Chúng tôi làm việc như một ban lãnh đạo nhân sự nội bộ: hiểu nhu cầu kinh doanh trước, rồi mới thiết kế, tuyển dụng và vận hành quanh nhu cầu đó.",
   "about.approach.h2": "Cách chúng tôi làm việc",
   "about.approach.lead": "Sáu nguyên tắc quyết định cách mọi dự án được triển khai.",
@@ -310,7 +314,7 @@ window.VHR_VI = {
   /* ---------- TALK TO US ---------- */
   "talk.hero.eyebrow": "Liên hệ",
   "talk.hero.h1": "Cùng xây đội ngũ của bạn tại Việt Nam.",
-  "talk.hero.lead": "Cho chúng tôi biết bạn đang lên kế hoạch gì và cần hỗ trợ ở đâu. Chuyên gia VHR One sẽ phản hồi trực tiếp.",
+  "talk.hero.lead": "Cho chúng tôi biết bạn đang lên kế hoạch gì và cần hỗ trợ ở đâu. Chuyên gia ZHR One sẽ phản hồi trực tiếp.",
   "talk.step1": "Bước 1 — Bạn đang muốn thực hiện việc gì?",
   "talk.step2": "Bước 2 — Cho chúng tôi biết nhu cầu của bạn",
   "intent.enter": "Vào thị trường Việt Nam",
@@ -336,13 +340,13 @@ window.VHR_VI = {
   "form.roles.ph": "vd: 2 kỹ sư backend senior, 1 QA lead",
   "form.message": "Nội dung",
   "form.message.ph": "Bạn đang lên kế hoạch gì và điều gì cần làm đúng trước tiên?",
-  "form.privacy": "Khi gửi thông tin, bạn đồng ý để VHR One liên hệ về nhu cầu của bạn. Chúng tôi không bán dữ liệu của bạn.",
+  "form.privacy": "Khi gửi thông tin, bạn đồng ý để ZHR One liên hệ về nhu cầu của bạn. Chúng tôi không bán dữ liệu của bạn.",
   "talk.next.eyebrow": "Điều gì diễn ra tiếp theo?",
   "talk.next.1": "Chúng tôi xem xét yêu cầu của bạn.",
-  "talk.next.2": "Chuyên gia VHR One liên hệ với bạn.",
+  "talk.next.2": "Chuyên gia ZHR One liên hệ với bạn.",
   "talk.next.3": "Chúng tôi làm rõ nhu cầu nhân sự và đề xuất bước tiếp theo.",
   "talk.direct.eyebrow": "Liên hệ trực tiếp",
-  "talk.direct.body": "Email: hello@vhrone.com<br>Thành phố Hồ Chí Minh, Việt Nam",
+  "talk.direct.body": "Email: hello@zhrone.com<br>Thành phố Hồ Chí Minh, Việt Nam",
 
   /* ---------- PRIVACY ---------- */
   "privacy.h1": "Chính sách bảo mật &amp; Điều khoản",

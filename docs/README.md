@@ -1,4 +1,4 @@
-# VHR One — Website MVP
+# ZHR One — Website MVP
 
 Static site: HTML + CSS + JavaScript thuần. Không cần build tool, không cần Node để chạy.
 Mở `index.html` bằng trình duyệt là xem được ngay.
@@ -12,7 +12,7 @@ docs/
 ├── index.html                     Trang chủ
 ├── solutions.html                 Giải pháp
 ├── hire-in-vietnam.html           Tuyển dụng tại Việt Nam
-├── why-vhr-one.html               Vì sao chọn VHR One
+├── why-zhr-one.html               Vì sao chọn ZHR One
 ├── workforce-intelligence.html    Danh sách bài chuyên môn
 ├── insight-tech-team-cost.html    Mẫu trang bài viết chi tiết
 ├── about.html                     Về chúng tôi
@@ -35,7 +35,8 @@ docs/
 │   └── app.js                     Hiệu ứng cuộn, lọc bài, xử lý form
 │
 ├── data/
-│   ├── vi.js                      TOÀN BỘ BẢN DỊCH TIẾNG VIỆT
+│   ├── vi.js                      Bản dịch tiếng Việt
+│   ├── ja.js                      Bản dịch tiếng Nhật
 │   └── insights.js                DANH SÁCH BÀI WORKFORCE INTELLIGENCE
 │
 └── tools/
@@ -48,13 +49,16 @@ docs/
 ## 2. Sửa nội dung thế nào
 
 ### Sửa chữ trên trang
-Mở file `.html` tương ứng và sửa trực tiếp. Tiếng Anh là bản gốc nằm trong HTML.
+Mở file `.html` tương ứng và sửa trực tiếp. Tiếng Anh là bản gốc nằm trong HTML, tiếng
+Việt nằm trong `data/vi.js`, tiếng Nhật nằm trong `data/ja.js`. Ba file cùng bộ key
+(hiện 322 key). Người xem chọn ngôn ngữ bằng ba nút EN/VI/日本語 ở header, hoặc thêm
+`?lang=vi` / `?lang=ja` vào URL.
 
 Ví dụ trong `index.html`:
 ```html
 <h1 data-i18n="home.hero.h1">Build the Right Team in Vietnam.</h1>
 ```
-Sửa phần chữ tiếng Anh ngay tại đây. Muốn đổi bản tiếng Việt thì mở `data/vi.js`,
+Sửa phần chữ tiếng Anh ngay tại đây. Muốn đổi tiếng Việt thì mở `data/vi.js`, muốn đổi tiếng Nhật thì mở `data/ja.js`;
 tìm key `home.hero.h1` và sửa chuỗi tương ứng.
 
 Quy tắc: **mỗi đoạn chữ có `data-i18n="key"` đều có một dòng cùng key trong `data/vi.js`.**
@@ -74,6 +78,17 @@ Lệnh này ghi header/footer mới vào cả 9 trang và tự đánh dấu mụ
 
 ### Đổi màu, font, khoảng cách
 Toàn bộ nằm trong `assets/css/tokens.css`. Đổi `--c-accent` là đổi màu nhấn cả site.
+
+### Thay icon dịch vụ
+Toàn bộ icon nằm trong `assets/img/icons.svg` dưới dạng sprite. Mỗi icon là một `<g id="i-tên">`
+với stroke 1.5, dùng `currentColor` để đổi màu theo hover.
+Trên trang, icon được nhúng qua `<use href="assets/img/icons.svg#i-tên"/>`.
+Đổi icon của một card: tìm `href="assets/img/icons.svg#i-cũ"` trong file HTML và sửa thành id mới.
+
+### Thay logo khách hàng trên trust bar
+Phần trust bar ở `index.html` (ngay sau section "What Brings You to Vietnam") hiện dùng
+tên placeholder. Thay bằng ảnh SVG/PNG thật của khách hàng: đổi thẻ `<span class="trust__logo">…</span>`
+thành `<img class="trust__logo" src="assets/img/logo-khach.svg" alt="Tên khách hàng">`.
 
 ### Thêm bài Workforce Intelligence
 Mở `data/insights.js`, copy một khối `{ ... }` trong mảng `ITEMS` và sửa nội dung.
@@ -141,12 +156,12 @@ nội bộ nếu cần.
 
 ## 6. Trước khi lên production
 
-- [ ] Thay `vhrone.com` trong thẻ `<link rel="canonical">`, `og:url` của 9 trang, trong
+- [ ] Thay `zhrone.com` trong thẻ `<link rel="canonical">`, `og:url` của 9 trang, trong
       `robots.txt` và `sitemap.xml` bằng tên miền thật
 - [ ] Thay số liệu placeholder ở `hire-in-vietnam.html` (mục Why Vietnam) bằng số có nguồn
 - [ ] Thay bảng chi phí và mục Sources trong `insight-tech-team-cost.html`
 - [ ] Nối endpoint form và gửi thử một lead
-- [ ] Thay `hello@vhrone.com` và link LinkedIn bằng thông tin thật
+- [ ] Thay `hello@zhrone.com` và link LinkedIn bằng thông tin thật
 - [ ] Nhờ pháp chế duyệt `privacy.html`
 - [ ] Gắn Google Analytics 4 và Search Console, khai báo sitemap
 - [ ] Thay logo SVG trong `partials/header.html`, `partials/footer.html` và
