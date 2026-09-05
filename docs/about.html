@@ -40,16 +40,17 @@
       <a class="btn btn--primary" href="talk-to-us.html" data-i18n="cta.talk">Talk to Us</a>
     </nav>
     <div class="header__actions">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="vi" aria-pressed="false">VI</button>
-        <button type="button" data-lang="ja" aria-pressed="false" lang="ja">日本語</button>
-      </div>
       <a class="btn btn--primary btn--sm" href="talk-to-us.html" data-i18n="cta.talk">Talk to Us</a>
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu"><span></span></button>
     </div>
   </div>
 </header>
+<!-- Nút chuyển ngôn ngữ tách khỏi header, cố định ở góc dưới bên phải để menu không giật khi đổi ngôn ngữ -->
+<div class="lang-float" role="group" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" data-lang="vi" aria-pressed="false">VI</button>
+  <button type="button" data-lang="ja" aria-pressed="false" lang="ja">日本語</button>
+</div>
 <!-- HEADER:END -->
 <main id="main">
 
@@ -85,12 +86,12 @@
       <p class="lead" data-i18n="about.approach.lead">Six principles that decide how every engagement is run.</p>
     </div>
     <div class="grid grid--3" data-reveal-group>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-target"/></svg></span><span class="card__num">01</span><h3 class="card__title" data-i18n="about.p1.t">Business First</h3><p data-i18n="about.p1.d">Workforce decisions follow the business need, not an HR template.</p></div>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-globe"/></svg></span><span class="card__num">02</span><h3 class="card__title" data-i18n="about.p2.t">Local Expertise</h3><p data-i18n="about.p2.d">Grounded in how the Vietnamese market actually behaves.</p></div>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-people"/></svg></span><span class="card__num">03</span><h3 class="card__title" data-i18n="about.p3.t">Senior Capability</h3><p data-i18n="about.p3.d">Experienced practitioners, not junior delivery teams.</p></div>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-chart"/></svg></span><span class="card__num">04</span><h3 class="card__title" data-i18n="about.p4.t">Intelligence</h3><p data-i18n="about.p4.d">Decisions supported by market and compensation data.</p></div>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-hand"/></svg></span><span class="card__num">05</span><h3 class="card__title" data-i18n="about.p5.t">Execution</h3><p data-i18n="about.p5.d">We implement, then hand the capability over.</p></div>
-      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/icons.svg#i-flex"/></svg></span><span class="card__num">06</span><h3 class="card__title" data-i18n="about.p6.t">Flexibility</h3><p data-i18n="about.p6.d">Engage the capability you need, for as long as you need it.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-target"/></svg></span><span class="card__num">01</span><h3 class="card__title" data-i18n="about.p1.t">Business First</h3><p data-i18n="about.p1.d">Workforce decisions follow the business need, not an HR template.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="card__num">02</span><h3 class="card__title" data-i18n="about.p2.t">Local Expertise</h3><p data-i18n="about.p2.d">Grounded in how the Vietnamese market actually behaves.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-people"/></svg></span><span class="card__num">03</span><h3 class="card__title" data-i18n="about.p3.t">Senior Capability</h3><p data-i18n="about.p3.d">Experienced practitioners, not junior delivery teams.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="card__num">04</span><h3 class="card__title" data-i18n="about.p4.t">Intelligence</h3><p data-i18n="about.p4.d">Decisions supported by market and compensation data.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hand"/></svg></span><span class="card__num">05</span><h3 class="card__title" data-i18n="about.p5.t">Execution</h3><p data-i18n="about.p5.d">We implement, then hand the capability over.</p></div>
+      <div class="card card--accent" data-reveal><span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flex"/></svg></span><span class="card__num">06</span><h3 class="card__title" data-i18n="about.p6.t">Flexibility</h3><p data-i18n="about.p6.d">Engage the capability you need, for as long as you need it.</p></div>
     </div>
   </div>
 </section>

@@ -5,6 +5,26 @@
 (function () {
   "use strict";
 
+  /* --- Nạp sprite icon inline để <use href="#i-..."> hoạt động ổn định ---
+     Tham chiếu sprite ngoài (<use href="file.svg#id">) không đáng tin trên
+     nhiều trình duyệt; ta fetch icons.svg rồi chèn thẳng vào đầu <body>. */
+  (function loadSprite() {
+    var existing = document.getElementById("vhr-sprite");
+    if (existing) return;
+    fetch("assets/img/icons.svg")
+      .then(function (r) { return r.ok ? r.text() : null; })
+      .then(function (svg) {
+        if (!svg) return;
+        var holder = document.createElement("div");
+        holder.id = "vhr-sprite";
+        holder.setAttribute("aria-hidden", "true");
+        holder.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";
+        holder.innerHTML = svg;
+        document.body.insertBefore(holder, document.body.firstChild);
+      })
+      .catch(function () {});
+  })();
+
   var toggle = document.getElementById("navToggle");
   var nav = document.getElementById("primaryNav");
   if (toggle && nav) {

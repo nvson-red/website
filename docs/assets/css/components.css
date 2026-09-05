@@ -100,17 +100,34 @@
 .nav > .btn { white-space: nowrap; }
 
 /* Chuyển ngôn ngữ */
+/* Chuyển ngôn ngữ: pill nhỏ, các nút cùng kích thước, không phá viền */
 .lang-switch {
-  display: inline-flex; border: 1px solid var(--c-line-strong); border-radius: var(--radius-sm);
-  overflow: hidden;
+  display: inline-flex; align-items: center;
+  padding: 3px;
+  background: var(--c-paper-2);
+  border: 1px solid var(--c-line);
+  border-radius: 8px;
+  gap: 2px;
 }
 .lang-switch button {
-  padding: 6px 10px;
-  font-family: var(--font-display); font-size: var(--text-micro); font-weight: 700;
-  letter-spacing: 0.08em; color: var(--c-text-muted);
+  min-width: 34px; height: 26px;
+  padding: 0 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--text-micro); font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted);
+  background: transparent;
+  border-radius: 5px;
+  line-height: 1;
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.lang-switch button[aria-pressed="true"] { background: var(--c-ink); color: #fff; }
+.lang-switch button:hover { color: var(--c-ink); }
+.lang-switch button[aria-pressed="true"] {
+  background: var(--c-surface);
+  color: var(--c-ink);
+  box-shadow: 0 1px 2px rgba(7, 26, 43, 0.08);
+}
 
 .nav-toggle { display: none; width: 42px; height: 42px; align-items: center; justify-content: center; }
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
@@ -424,7 +441,7 @@
 .card--dark:hover .icon-tile { background: var(--c-accent-bright); color: var(--c-ink); }
 
 /* Nút chuyển ngôn ngữ rộng hơn khi có tiếng Nhật */
-.lang-switch button[data-lang="ja"] { font-family: var(--font-body); letter-spacing: 0; font-size: 0.7rem; }
+.lang-switch button[data-lang="ja"] { letter-spacing: 0; font-size: 0.68rem; }
 
 /* ---------- Trust bar (dải logo khách hàng) --------------- */
 .trust {
@@ -474,7 +491,7 @@ html[lang="ja"] .site-header .btn { white-space: nowrap; }
 html[lang="ja"] .nav { gap: clamp(0.4rem, 1vw, 1rem); }
 html[lang="ja"] .nav__link { font-size: 0.82rem; }
 html[lang="ja"] .site-header .btn { font-size: 0.75rem; padding: 0.6rem 1rem; }
-html[lang="ja"] .lang-switch button { padding: 6px 8px; }
+html[lang="ja"] .lang-switch button { padding: 0 8px; }
 
 /* Bản tiếng Việt: nowrap + gap chặt hơn để menu vừa 1 hàng */
 html[lang="vi"] .nav { gap: clamp(0.5rem, 1.1vw, 1.2rem); }
@@ -487,3 +504,62 @@ html[lang="vi"] .nav__link { font-size: 0.84rem; }
   border-radius: 0;
 }
 .lang-switch button:focus:not(:focus-visible) { outline: none; }
+
+/* =========================================================
+   Floating language switch — cố định góc dưới bên phải.
+   Không nằm trong header nên menu không giật khi đổi ngôn ngữ.
+   ========================================================= */
+.lang-float {
+  position: fixed;
+  right: clamp(16px, 2.4vw, 32px);
+  bottom: clamp(16px, 2.4vw, 32px);
+  z-index: 90;
+  display: inline-flex; align-items: center;
+  padding: 4px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  box-shadow: 0 12px 32px -12px rgba(7, 26, 43, 0.22),
+              0 2px 6px rgba(7, 26, 43, 0.06);
+  backdrop-filter: saturate(1.2);
+  gap: 2px;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.lang-float:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -14px rgba(7, 26, 43, 0.28),
+              0 2px 6px rgba(7, 26, 43, 0.08);
+}
+.lang-float button {
+  min-width: 36px; height: 30px;
+  padding: 0 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--text-micro); font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted);
+  background: transparent;
+  border-radius: 999px;
+  line-height: 1;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.lang-float button:hover { color: var(--c-ink); }
+.lang-float button[aria-pressed="true"] {
+  background: var(--c-ink);
+  color: #fff;
+}
+.lang-float button[data-lang="ja"] { letter-spacing: 0; font-size: 0.7rem; padding: 0 10px; }
+.lang-float button:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+  border-radius: 999px;
+}
+
+/* Kèm tránh chồng với các block cuối trang khi rất hẹp */
+@media (max-width: 480px) {
+  .lang-float { right: 12px; bottom: 12px; padding: 3px; }
+  .lang-float button { min-width: 30px; height: 26px; padding: 0 9px; font-size: 10px; }
+}
+
+/* Không in ra khi print */
+@media print { .lang-float { display: none !important; } }

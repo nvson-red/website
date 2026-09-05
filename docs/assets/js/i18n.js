@@ -46,7 +46,7 @@
     });
 
     document.documentElement.lang = lang;
-    document.querySelectorAll(".lang-switch button").forEach(function (b) {
+    document.querySelectorAll(".lang-switch button, .lang-float button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
     try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
@@ -66,7 +66,7 @@
   window.VHR_I18N = { apply: apply, current: current, dicts: DICTS };
 
   document.addEventListener("click", function (e) {
-    var b = e.target.closest(".lang-switch button");
+    var b = e.target.closest(".lang-switch button, .lang-float button");
     if (b) apply(b.dataset.lang);
   });
 
