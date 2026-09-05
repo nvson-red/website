@@ -226,3 +226,118 @@
 
 /* Nút Talk to Us cần cạnh gọn của sans */
 .btn { font-weight: 600; }
+
+/* =========================================================
+   ANIMATIONS — page-load intro + scroll reveals
+   Có prefers-reduced-motion để tắt cho người nhạy cảm với chuyển động.
+   ========================================================= */
+
+/* --- Hero: fade + slide in ngay khi vào trang ------------ */
+@keyframes intro-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes intro-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes intro-scale {
+  from { opacity: 0; transform: scale(0.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero > .wrap > .hero__grid > div > *,
+.page-hero > .wrap > * {
+  animation: intro-up 900ms var(--ease) both;
+}
+/* Stagger từng tầng trong hero */
+.hero .eyebrow          { animation-delay:   0ms; }
+.hero h1                { animation-delay:  90ms; }
+.hero .hero__sub        { animation-delay: 240ms; }
+.hero .btn-row          { animation-delay: 380ms; }
+.hero__pillars .hero__pillar { animation: intro-fade 700ms var(--ease) both; animation-delay: 520ms; }
+.hero__pillars .hero__pillar:nth-child(2) { animation-delay: 620ms; }
+.hero__pillars .hero__pillar:nth-child(3) { animation-delay: 720ms; }
+.hero > .wrap > .hero__grid > div:last-child > .lead { animation-delay: 800ms; }
+
+.page-hero .breadcrumb { animation-delay: 0ms; }
+.page-hero .eyebrow    { animation-delay: 60ms; }
+.page-hero h1          { animation-delay: 160ms; }
+.page-hero .lead       { animation-delay: 320ms; }
+.page-hero .btn-row    { animation-delay: 460ms; }
+
+/* Nền hero: gradient trôi nhẹ vào */
+.hero::before, .page-hero::before, .statement::before {
+  animation: intro-fade 1400ms var(--ease) both;
+}
+.hero::after {
+  animation: intro-fade 1800ms var(--ease) both;
+  animation-delay: 200ms;
+}
+
+/* --- Reveal khi cuộn: mượt hơn, hỗ trợ biến thể ---------- */
+[data-reveal] {
+  transition:
+    opacity 900ms var(--ease),
+    transform 900ms var(--ease),
+    filter 900ms var(--ease);
+}
+[data-reveal="fade"]  { opacity: 0; transform: none; filter: blur(6px); }
+[data-reveal="left"]  { opacity: 0; transform: translateX(-24px); }
+[data-reveal="right"] { opacity: 0; transform: translateX(24px); }
+[data-reveal="scale"] { opacity: 0; transform: scale(0.96); }
+[data-reveal].is-visible { opacity: 1; transform: none; filter: none; }
+
+/* Header co lại nhẹ khi cuộn xuống — cảm giác "settle" chuyên nghiệp */
+.site-header {
+  transition:
+    height var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+.site-header.is-stuck {
+  height: 60px;
+  box-shadow: 0 6px 22px -18px rgba(7, 26, 43, 0.35);
+}
+
+/* Nút CTA — hiệu ứng shine khi hover, tinh tế */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.22) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 620ms var(--ease);
+  z-index: -1;
+}
+.btn:hover::after { transform: translateX(110%); }
+
+/* Link menu underline: mượt, expand từ giữa */
+.nav__link::after {
+  left: 50%; width: 0; transform: none;
+  transition: width var(--dur) var(--ease), left var(--dur) var(--ease);
+}
+.nav__link:hover::after,
+.nav__link[aria-current="page"]::after {
+  left: 0; width: 100%;
+}
+
+/* Card: khi hover, viền phát sáng nhẹ + icon xoay */
+.card { transition: transform 380ms var(--ease), box-shadow 380ms var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+
+/* Value list rows fade từng dòng khi vào tầm nhìn */
+.value-list .value-item { transition: background var(--dur) var(--ease), padding-inline var(--dur) var(--ease), transform 700ms var(--ease), opacity 700ms var(--ease); }
+
+/* Reduced motion — tắt hết animation */
+@media (prefers-reduced-motion: reduce) {
+  .hero > .wrap > .hero__grid > div > *,
+  .page-hero > .wrap > *,
+  .hero__pillars .hero__pillar,
+  .hero::before, .hero::after, .page-hero::before, .statement::before {
+    animation: none !important;
+  }
+  [data-reveal], [data-reveal="fade"], [data-reveal="left"],
+  [data-reveal="right"], [data-reveal="scale"] {
+    opacity: 1 !important; transform: none !important; filter: none !important;
+  }
+}

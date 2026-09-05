@@ -83,6 +83,7 @@
   position: relative;
   font-size: var(--text-sm); font-weight: 500; color: var(--c-text);
   padding: 6px 0;
+  white-space: nowrap;
   transition: color var(--dur) var(--ease);
 }
 .nav__link::after {
@@ -95,6 +96,8 @@
 .nav__link[aria-current="page"] { color: var(--c-ink); font-weight: 600; }
 
 .header__actions { display: flex; align-items: center; gap: var(--space-3); }
+.header__actions .btn { white-space: nowrap; }
+.nav > .btn { white-space: nowrap; }
 
 /* Chuyển ngôn ngữ */
 .lang-switch {
@@ -120,7 +123,7 @@
 .nav-toggle[aria-expanded="true"] span::before { transform: rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after  { transform: rotate(-45deg) translateY(0); }
 
-@media (max-width: 1180px) {
+@media (max-width: 1240px) {
   .nav-toggle { display: inline-flex; }
   .nav {
     position: fixed; inset: var(--header-h) 0 auto 0;
@@ -137,7 +140,7 @@
   .header__actions .btn { display: none; }
   .nav .btn { display: inline-flex; margin-top: var(--space-4); justify-content: center; }
 }
-@media (min-width: 1181px) { .nav > .btn { display: none; } }
+@media (min-width: 1241px) { .nav > .btn { display: none; } }
 
 /* ---------- Footer -------------------------------------- */
 .site-footer { background: var(--c-ink); color: var(--c-on-dark); padding-block: var(--space-8) var(--space-6); }
@@ -175,7 +178,17 @@
 }
 .card__title { font-size: var(--text-h4); }
 .card p { color: var(--c-text-muted); font-size: var(--text-sm); }
-.card--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--c-line-strong); }
+.card--link {
+  cursor: pointer;
+  will-change: transform;
+}
+.card--link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px -28px rgba(7, 26, 43, 0.38);
+  border-color: var(--c-accent);
+}
+.card--link:hover .card__title { color: var(--c-accent-deep); }
+.card--dark.card--link:hover .card__title { color: var(--c-accent-bright); }
 .card--link:hover .card__cta { color: var(--c-accent-deep); }
 .card--link:hover .card__cta .btn__arrow { transform: translateX(4px); }
 .card__cta {
@@ -187,10 +200,11 @@
 .card__cta .btn__arrow { transition: transform var(--dur) var(--ease); }
 /* Vệt accent ở cạnh trên khi hover */
 .card--accent::before {
-  content: ""; position: absolute; inset: -1px -1px auto -1px; height: 3px;
-  background: var(--c-accent); border-radius: var(--radius) var(--radius) 0 0;
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--c-accent), var(--c-accent-bright));
+  border-radius: var(--radius) var(--radius) 0 0;
   transform: scaleX(0); transform-origin: left;
-  transition: transform var(--dur) var(--ease);
+  transition: transform 480ms var(--ease);
 }
 .card--accent:hover::before { transform: scaleX(1); }
 
@@ -395,10 +409,17 @@
   display: inline-grid; place-items: center;
   background: rgba(14,158,150,0.10);
   color: var(--c-accent-deep);
-  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  transition: background var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              transform 380ms var(--ease),
+              box-shadow var(--dur) var(--ease);
 }
 .icon-tile .icon { width: 22px; height: 22px; color: currentColor; }
-.card:hover .icon-tile { background: var(--c-accent); color: #fff; }
+.card:hover .icon-tile {
+  background: var(--c-accent); color: #fff;
+  transform: rotate(-6deg) scale(1.06);
+  box-shadow: 0 10px 24px -10px rgba(14, 158, 150, 0.55);
+}
 .card--dark .icon-tile { background: rgba(25,198,180,0.16); color: var(--c-accent-bright); }
 .card--dark:hover .icon-tile { background: var(--c-accent-bright); color: var(--c-ink); }
 
@@ -454,3 +475,7 @@ html[lang="ja"] .nav { gap: clamp(0.4rem, 1vw, 1rem); }
 html[lang="ja"] .nav__link { font-size: 0.82rem; }
 html[lang="ja"] .site-header .btn { font-size: 0.75rem; padding: 0.6rem 1rem; }
 html[lang="ja"] .lang-switch button { padding: 6px 8px; }
+
+/* Bản tiếng Việt: nowrap + gap chặt hơn để menu vừa 1 hàng */
+html[lang="vi"] .nav { gap: clamp(0.5rem, 1.1vw, 1.2rem); }
+html[lang="vi"] .nav__link { font-size: 0.84rem; }
