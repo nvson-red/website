@@ -217,13 +217,35 @@
 .card__cta .btn__arrow { transition: transform var(--dur) var(--ease); }
 /* Vệt accent ở cạnh trên khi hover */
 .card--accent::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
-  background: linear-gradient(90deg, var(--c-accent), var(--c-accent-bright));
-  border-radius: var(--radius) var(--radius) 0 0;
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 480ms var(--ease);
+  /* Disabled: remove the thin top accent bar; prefer full-card border glow on hover */
+  display: none;
 }
-.card--accent:hover::before { transform: scaleX(1); }
+
+/* Stronger "light up" effect for accent cards on hover */
+.card--link.card--accent {
+  position: relative; overflow: visible; /* allow outer glow */
+  border: 1px solid rgba(14,158,150,0.10);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+/* outer blurred gradient ring */
+.card--link.card--accent::after {
+  /* removed colored overlay to preserve content contrast */
+  display: none;
+}
+
+.card--link.card--accent:hover {
+  transform: translateY(-4px);
+  /* soft outer glow without tinting the card surface */
+  box-shadow:
+    0 14px 30px rgba(7,26,43,0.06),
+    0 6px 18px rgba(7,26,43,0.04),
+    0 0 36px rgba(14,158,150,0.06);
+  border-color: rgba(14,158,150,0.22);
+}
+.card--link.card--accent:hover .card__title { color: var(--c-ink); }
+.card--link.card--accent:hover .card__num,
+.card--link.card--accent:hover .card__cta { color: var(--c-accent-deep); }
 
 .card--dark { background: var(--c-ink-soft); border-color: var(--c-on-dark-line); }
 .card--dark .card__title { color: var(--c-on-dark); }
