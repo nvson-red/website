@@ -15,7 +15,7 @@ window.VHR_VI = {
   "nav.solutions": "Giải pháp",
   "nav.hire": "Tuyển dụng tại Việt Nam",
   "nav.why": "Vì sao chọn ZHR Global",
-  "nav.intel": "Workforce Intelligence",
+  "nav.intel": "Phân tích nhân sự",
   "nav.about": "Về chúng tôi",
   "a11y.skip": "Tới nội dung chính",
   "footer.col1": "Giải pháp",
@@ -39,7 +39,7 @@ window.VHR_VI = {
   "label.03": "03 — Giải pháp",
   "label.04": "04 — Nhân sự công nghệ",
   "label.05": "05 — Vì sao chọn ZHR Global",
-  "label.06": "06 — Workforce Intelligence",
+  "label.06": "06 — Phân tích nhân sự",
   "label.next": "Bước tiếp theo",
   "label.outcome": "Kết quả",
   "label.featured": "Nổi bật",
@@ -55,7 +55,7 @@ window.VHR_VI = {
   "cta.buildMyTeam": "Xây đội ngũ cho tôi",
   "cta.exploreSolutions": "Xem các giải pháp",
   "cta.exploreAll": "Xem toàn bộ giải pháp",
-  "cta.exploreIntel": "Khám phá Workforce Intelligence",
+  "cta.exploreIntel": "Khám phá Phân tích nhân sự",
   "cta.explore": "Tìm hiểu",
   "cta.learnMore": "Xem chi tiết",
   "cta.findTech": "Tìm nhân sự công nghệ",
@@ -66,14 +66,14 @@ window.VHR_VI = {
   "cta.joinExpert": "Tham gia mạng lưới chuyên gia",
 
   /* ---------- Thông điệp thương hiệu ---------- */
-  "statement.main": "Có năng lực nhân sự.<br><em>Không gánh chi phí bộ máy.</em>",
+  "statement.main": "Phòng nhân sự thuê ngoài<br><em>Từ chiến lược tới vận hành</em>",
   "pillar.intel": "Hiểu biết thị trường nhân lực Việt Nam",
   "pillar.senior": "Chuyên môn HR cấp cao",
   "pillar.exec": "Triển khai thực tế",
 
   /* ---------- TRANG CHỦ ---------- */
   "home.hero.eyebrow": "Đối tác nhân sự tại Việt Nam",
-  "home.hero.h1": "Xây dựng đội ngũ tại Việt Nam",
+  "home.hero.h1": "Xây dựng đúng đội ngũ tại Việt Nam",
   "home.hero.sub": "Nhanh hơn. Gọn hơn. Với hiểu biết bản địa. ZHR Global giúp doanh nghiệp quốc tế tiếp cận nhân tài Việt Nam, xây dựng đội ngũ hiệu quả và quản trị nhân sự — từ chiến lược đến triển khai.",
   "home.hero.side": "Một đối tác bản địa xuyên suốt hành trình nhân sự: hiểu thị trường, thiết kế tổ chức, tuyển đúng người và vận hành HR tại chỗ.",
   "home.brings.h2": "Bạn đang ở giai đoạn nào trong hành trình chinh phục Việt Nam?",
@@ -103,7 +103,7 @@ window.VHR_VI = {
   "home.why.h2": "Hiểu bản địa - Chuyên môn cấp cao - Triển khai thật",
   "home.why.moreT": "Xem cách chúng tôi làm việc",
   "home.why.moreD": "Hiểu bản địa, tối ưu chi phí nhân sự, tuyển đúng người và triển khai thực tế.",
-  "home.intel.h2": "Vietnam Workforce Intelligence",
+  "home.intel.h2": "Phân tích nhân sự Việt Nam",
   "home.cta.h2": "Đang lên kế hoạch xây đội ngũ tại Việt Nam?",
   "home.cta.lead": "Hãy cho chúng tôi biết kế hoạch của bạn. ZHR Global giúp bạn hiểu thị trường nhân tài, chi phí nhân sự và cách thực tế nhất để xây dựng đội ngũ.",
 
@@ -111,11 +111,11 @@ window.VHR_VI = {
   "sol.build.t": "Xây dựng đội ngũ",
   "sol.build.list": "Hoạch định nhân sự · Thiết kế tổ chức · Khảo sát lương · Thiết lập HR · Lương thưởng &amp; phúc lợi",
   "sol.find.t": "Tìm đúng người",
-  "sol.find.list": "Tuyển cấp cao · Tuyển chuyên môn · Nhân sự công nghệ · Talent Mapping · Build-a-Team",
+  "sol.find.list": "Tuyển cấp cao · Tuyển chuyên môn · Nhân sự công nghệ · Lập bản đồ nhân tài · Xây dựng đội ngũ theo nhu cầu",
   "sol.employ.t": "Sử dụng &amp; vận hành",
   "sol.employ.list": "Vận hành HR · Điều phối payroll · Hỗ trợ lao động · Vòng đời nhân viên · Tuân thủ HR",
   "sol.optimize.t": "Tối ưu nhân sự",
-  "sol.optimize.list": "Total Rewards · Hiệu suất · Khung năng lực · Lộ trình nghề nghiệp · Fractional HR",
+  "sol.optimize.list": "Đãi ngộ toàn diện · Hiệu suất · Khung năng lực · Lộ trình nghề nghiệp · HR theo giờ",
 
   /* ---------- Nhân sự công nghệ ---------- */
   "tech.eng": "Kỹ thuật phần mềm",
@@ -128,7 +128,7 @@ window.VHR_VI = {
   /* ---------- Vì sao chọn (thẻ trang chủ) ---------- */
   "why.market.t": "Am hiểu thị trường Việt Nam",
   "why.market.d": "Nắm rõ nhân tài, mặt bằng lương và môi trường lao động bản địa.",
-  "why.intel.t": "Workforce Intelligence",
+  "why.intel.t": "Phân tích nhân sự",
   "why.intel.d": "Ra quyết định dựa trên dữ liệu thị trường và lương thưởng.",
   "why.senior.t": "Chuyên môn HR cấp cao",
   "why.senior.d": "Tiếp cận lãnh đạo và chuyên gia HR giàu kinh nghiệm.",
@@ -139,16 +139,16 @@ window.VHR_VI = {
 
   /* ---------- TRANG GIẢI PHÁP ---------- */
   "sol.hero.eyebrow": "Giải pháp",
-  "sol.hero.h1": "Có năng lực nhân sự bạn cần. Không gánh chi phí bộ máy",
+  "sol.hero.h1": "Phòng nhân sự thuê ngoài - Từ chiến lược tới vận hành",
   "sol.hero.lead": "Từ chiến lược nhân sự đến tuyển dụng và vận hành HR, tiếp cận đúng chuyên môn ở đúng giai đoạn trong hành trình tại Việt Nam.",
-  "sol.build.h2": "Phòng nhân sự thuê ngoài - Từ chiến lược tới vận hành",
+  "sol.build.h2": "Xây đúng đội ngũ mà bạn thực sự cần",
   "sol.build.lead": "Thiết kế tổ chức và cấu trúc chi phí trước khi tuyển, để đội ngũ bạn xây là đội ngũ doanh nghiệp có thể duy trì.",
   "sol.build.outcome": "Xây dựng đội ngũ gọn nhẹ và cạnh tranh ngay từ đầu.",
   "sol.build.services": "<li>Hoạch định nhân sự</li><li>Thiết kế tổ chức</li><li>Thiết kế vị trí</li><li>Hoạch định chi phí nhân sự</li><li>Khảo sát lương thị trường</li><li>Cấu trúc lương</li><li>Thiết lập hệ thống HR</li><li>Chính sách nhân sự</li><li>Lương thưởng &amp; phúc lợi</li>",
   "sol.find.h2": "Tuyển đúng người. Nhanh hơn",
-  "sol.find.lead": "Tuyển cấp cao, talent mapping và tuyển dụng chuyên môn do những người hiểu cách thị trường nhân tài Việt Nam vận hành thực hiện.",
+  "sol.find.lead": "Tuyển cấp cao, lập bản đồ nhân tài và tuyển dụng chuyên môn do những người hiểu cách thị trường nhân tài Việt Nam vận hành thực hiện.",
   "sol.find.outcome": "Tiếp cận thị trường nhân tài Việt Nam mà không cần xây bộ phận tuyển dụng nội bộ lớn.",
-  "sol.find.services": "<li>Tuyển dụng cấp cao</li><li>Tuyển dụng chuyên môn</li><li>Tuyển dụng công nghệ</li><li>Talent Mapping</li><li>Build-a-Team</li><li>Nhân sự dự án</li><li>Nhân sự fractional</li>",
+  "sol.find.services": "<li>Tuyển dụng cấp cao</li><li>Tuyển dụng chuyên môn</li><li>Tuyển dụng công nghệ</li><li>Lập bản đồ nhân tài</li><li>Xây dựng đội ngũ theo nhu cầu</li><li>Nhân sự dự án</li><li>Nhân sự theo giờ</li>",
   "sol.employ.h2": "Vận hành đội ngũ tại Việt Nam một cách vững vàng",
   "sol.employ.lead": "Công việc HR hằng ngày được xử lý tại chỗ, để đội ngũ của bạn tập trung vào kinh doanh thay vì giấy tờ.",
   "sol.employ.outcome": "Giảm độ phức tạp vận hành với đội ngũ HR bản địa vững chuyên môn.",
@@ -156,7 +156,7 @@ window.VHR_VI = {
   "sol.optimize.h2": "Biến năng lực HR thành hiệu quả kinh doanh",
   "sol.optimize.lead": "Hệ thống đãi ngộ, hiệu suất và năng lực phù hợp quy mô hiện tại và mở rộng được cùng doanh nghiệp.",
   "sol.optimize.outcome": "Tiếp cận chuyên môn HR chuyên sâu mà không cần duy trì bộ phận HR lớn.",
-  "sol.optimize.services": "<li>Total Rewards</li><li>Phân cấp vị trí</li><li>Cấu trúc lương</li><li>Quản trị hiệu suất</li><li>KPI / OKR</li><li>Khung năng lực</li><li>Lộ trình nghề nghiệp</li><li>Chuyển đổi HR</li><li>Fractional HR Director / HRBP</li>",
+  "sol.optimize.services": "<li>Đãi ngộ toàn diện</li><li>Phân cấp vị trí</li><li>Cấu trúc lương</li><li>Quản trị hiệu suất</li><li>KPI / OKR</li><li>Khung năng lực</li><li>Lộ trình nghề nghiệp</li><li>Chuyển đổi HR</li><li>Giám đốc HR theo giờ / HRBP</li>",
   "sol.model.h2": "Một đối tác. Từ chiến lược đến triển khai",
   "sol.model.lead": "Tham gia ở bất kỳ giai đoạn nào. Chúng tôi có thể chạy toàn bộ chuỗi hoặc chỉ phần bạn cần.",
   "sol.cta.h2": "Chưa rõ mình cần phần nào?",
@@ -271,7 +271,7 @@ window.VHR_VI = {
 
   /* ---------- WORKFORCE INTELLIGENCE ---------- */
   "intel.hero.eyebrow": "Dữ liệu. Thông tin. Chuyên môn thực dụng.",
-  "intel.hero.h1": "Vietnam Workforce Intelligence",
+  "intel.hero.h1": "Phân tích nhân sự Việt Nam",
   "intel.hero.lead": "Thông tin chuyên môn thực dụng dành cho doanh nghiệp quốc tế đang xây dựng và vận hành đội ngũ tại Việt Nam.",
   "intel.featured.h2": "Bài nổi bật",
   "intel.featured.lead": "Bắt đầu với những câu hỏi doanh nghiệp quốc tế hỏi chúng tôi nhiều nhất.",
@@ -344,7 +344,7 @@ window.VHR_VI = {
   "talk.next.2": "Chuyên gia ZHR Global liên hệ với bạn.",
   "talk.next.3": "Chúng tôi làm rõ nhu cầu nhân sự và đề xuất bước tiếp theo.",
   "talk.direct.eyebrow": "Liên hệ trực tiếp",
-  "talk.direct.body": "Email: hello@zhrone.com<br>Thành phố Hồ Chí Minh, Việt Nam",
+  "talk.direct.body": "Email: hello@zhrone.com<br>Thành phố Hà Nội, Việt Nam",
 
   /* ---------- PRIVACY ---------- */
   "privacy.h1": "Chính sách bảo mật &amp; Điều khoản",
@@ -359,5 +359,4 @@ window.VHR_VI = {
   "privacy.s4.p": "Bạn có thể yêu cầu chỉnh sửa hoặc xóa dữ liệu bất kỳ lúc nào qua email ở chân trang.",
   "privacy.s5.h": "Điều khoản sử dụng",
   "privacy.s5.p": "Nội dung trên website mang tính thông tin chung. Số liệu về nhân sự, lương và lao động chỉ mang tính tham khảo và cần được kiểm chứng cho tình huống cụ thể trước khi ra quyết định.",
-  "sol.s1.label": "01 — Phòng nhân sự thuê ngoài"
 };

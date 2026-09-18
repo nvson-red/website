@@ -5,12 +5,14 @@
 /* ---------- Hero (trang chủ) ---------------------------- */
 .hero {
   position: relative; overflow: hidden;
-  background: var(--c-ink); color: var(--c-on-dark);
+  background: var(--c-ink) url("../img/insights/hero-solutions.jpg") center right / cover no-repeat;
+  color: var(--c-on-dark);
   padding-block: clamp(4rem, 3rem + 7vw, 8.5rem) clamp(3rem, 2rem + 5vw, 6rem);
 }
 .hero::before {
   content: ""; position: absolute; inset: 0;
   background:
+    linear-gradient(90deg, rgba(7,26,43,0.98) 0%, rgba(7,26,43,0.88) 45%, rgba(7,26,43,0.62) 100%),
     radial-gradient(70% 60% at 82% 12%, rgba(25,198,180,0.30), transparent 62%),
     radial-gradient(60% 70% at 8% 95%, rgba(14,158,150,0.20), transparent 65%);
 }
@@ -54,9 +56,29 @@
   background: var(--c-ink); color: var(--c-on-dark);
   padding-block: clamp(3.25rem, 2.5rem + 5vw, 6.5rem) clamp(2.75rem, 2rem + 4vw, 5rem);
 }
+.page-hero--solutions,
+.page-hero--hire,
+.page-hero--why,
+.page-hero--about,
+.page-hero--intelligence,
+.page-hero--insight,
+.page-hero--contact {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page-hero--solutions { background-image: url("../img/insights/hero-build-vietnam.jpg"); }
+.page-hero--hire { background-image: url("../img/insights/hero-hire-vietnam.jpg"); }
+.page-hero--why { background-image: url("../img/insights/hero-why-zhr.jpg"); }
+.page-hero--about { background-image: url("../img/insights/hero-about.jpg"); }
+.page-hero--intelligence { background-image: url("../img/insights/hero-workforce-intelligence.jpg"); }
+.page-hero--insight { background-image: url("../img/insights/hero-insight-salary.jpg"); }
+.page-hero--contact { background-image: url("../img/insights/hero-contact.jpg"); }
 .page-hero::before {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(75% 80% at 88% 0%, rgba(25,198,180,0.24), transparent 60%);
+  background:
+    linear-gradient(90deg, rgba(7,26,43,0.96), rgba(7,26,43,0.70)),
+    radial-gradient(75% 80% at 88% 0%, rgba(25,198,180,0.24), transparent 60%);
 }
 .page-hero > .wrap { position: relative; z-index: 1; }
 .page-hero h1 { color: #fff; max-width: 20ch; }
@@ -84,7 +106,8 @@
   border-bottom: 1px solid var(--c-line); font-size: var(--text-sm);
 }
 .service-list li::before {
-  content: ""; position: absolute; left: 0; top: 1.2em; width: 8px; height: 1px; background: var(--c-accent);
+  content: ""; position: absolute; left: 0; top: 50%; width: 8px; height: 1px;
+  background: var(--c-accent); transform: translateY(-50%);
 }
 .section--dark .service-list li { border-bottom-color: var(--c-on-dark-line); }
 @media (max-width: 640px) { .service-list { column-count: 1; } }

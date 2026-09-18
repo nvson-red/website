@@ -27,7 +27,7 @@
   --c-on-dark-line:   #FFFFFF1F;
 
   /* --- Typography --------------------------------------- */
-  --font-display: "Fraunces", "Iowan Old Style", "Charter", "Georgia", serif;
+  --font-display: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --text-micro: 0.6875rem;

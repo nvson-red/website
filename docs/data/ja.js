@@ -64,7 +64,7 @@ window.VHR_JA = {
   "cta.joinExpert": "エキスパートネットワークに参加",
 
   /* ---------- ブランドメッセージ ---------- */
-  "statement.main": "HR ケイパビリティを。<br><em>HR オーバーヘッドは不要。</em>",
+  "statement.main": "アウトソース HR 部門<br><em>戦略から運用まで</em>",
   "pillar.intel": "ベトナム労働市場インテリジェンス",
   "pillar.senior": "経験豊富な HR エキスパート",
   "pillar.exec": "実行力",
@@ -137,9 +137,9 @@ window.VHR_JA = {
 
   /* ---------- ソリューション・ページ ---------- */
   "sol.hero.eyebrow": "ソリューション",
-  "sol.hero.h1": "必要な HR ケイパビリティを、余計なオーバーヘッド無しで",
+  "sol.hero.h1": "アウトソース HR 部門 - 戦略から運用まで",
   "sol.hero.lead": "ワークフォース戦略から採用、HR 運用まで、ベトナム進出の各段階で必要な専門知識にアクセスできます。",
-  "sol.build.h2": "アウトソース HR 部門 - 戦略から運用まで",
+  "sol.build.h2": "本当に必要なチームを構築する",
   "sol.build.lead": "採用前に組織とコスト構造を設計。作るチームが、事業として維持できるチームになります。",
   "sol.build.outcome": "最初からリーンで競争力のあるワークフォースを構築。",
   "sol.build.services": "<li>ワークフォース計画</li><li>組織設計</li><li>職務設計</li><li>ワークフォースコスト計画</li><li>給与ベンチマーク</li><li>給与体系</li><li>HR 基盤構築</li><li>HR ポリシー</li><li>報酬 &amp; 福利厚生</li>",
@@ -342,7 +342,7 @@ window.VHR_JA = {
   "talk.next.2": "ZHR Global のエキスパートからご連絡します。",
   "talk.next.3": "ワークフォース・ニーズを明確化し、次のステップを提案します。",
   "talk.direct.eyebrow": "直接のお問い合わせ",
-  "talk.direct.body": "Email: hello@zhrone.com<br>ホーチミン市、ベトナム",
+  "talk.direct.body": "Email: hello@zhrone.com<br>ハノイ市、ベトナム",
 
   /* ---------- プライバシー ---------- */
   "privacy.h1": "プライバシーポリシー &amp; 利用規約",
@@ -357,5 +357,4 @@ window.VHR_JA = {
   "privacy.s4.p": "フッター記載のメールアドレスから、いつでもデータの訂正・削除をご請求いただけます。",
   "privacy.s5.h": "利用規約",
   "privacy.s5.p": "本サイトのコンテンツは一般情報です。人材、給与、雇用に関する数値は参考値であり、行動に移す前に具体的な状況に応じて検証してください。",
-  "sol.s1.label": "01 — アウトソース HR 部門"
 };
