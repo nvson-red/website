@@ -228,11 +228,18 @@
   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
-/* outer blurred gradient ring */
-.card--link.card--accent::after {
-  /* removed colored overlay to preserve content contrast */
-  display: none;
+/* Spotlight theo con trỏ — ánh teal mềm chạy theo chuột, giữ tương phản nội dung */
+.card--spot::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%),
+              rgba(14, 158, 150, 0.12), transparent 62%);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+  pointer-events: none;
 }
+.card--spot:hover::after { opacity: 1; }
 
 .card--link.card--accent:hover {
   transform: translateY(-4px);

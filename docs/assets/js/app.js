@@ -101,3 +101,58 @@
     });
   });
 })();
+
+/* =========================================================
+   GLOBAL ENTERPRISE POLISH
+   Progress bar, card spotlight, back-to-top.
+   Không phá vỡ hành vi có sẵn, tôn trọng prefers-reduced-motion.
+   ========================================================= */
+(function () {
+  "use strict";
+
+  var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* --- Reading progress bar --- */
+  var progress = document.createElement("div");
+  progress.className = "progress";
+  progress.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progress);
+
+  var ticking = false;
+  function renderProgress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+    progress.style.transform = "scaleX(" + p.toFixed(4) + ")";
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(renderProgress); }
+  }, { passive: true });
+  renderProgress();
+
+  /* --- Spotlight theo con trỏ cho mọi thẻ link --- */
+  if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+    Array.prototype.forEach.call(document.querySelectorAll(".card--link"), function (card) {
+      card.classList.add("card--spot");
+      card.addEventListener("pointermove", function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top) + "px");
+      }, { passive: true });
+    });
+  }
+
+  /* --- Back to top --- */
+  var top = document.createElement("button");
+  top.type = "button";
+  top.className = "back-top";
+  top.setAttribute("aria-label", "Back to top");
+  top.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.body.appendChild(top);
+  top.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
+  });
+  var onScrollTop = function () { top.classList.toggle("is-visible", window.scrollY > 600); };
+  onScrollTop();
+  window.addEventListener("scroll", onScrollTop, { passive: true });
+})();
