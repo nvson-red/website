@@ -1,5 +1,5 @@
 /* =========================================================
-   ZHR GLOBAL — DỮ LIỆU WORKFORCE INTELLIGENCE
+   ZHR GLOBAL — DỮ LIỆU HR INSIGHTS
    Thêm bài mới: copy một khối {...} và sửa nội dung.
    Trước khi có CMS, đây là nơi duy nhất cần sửa.
    categories: build | talent | salary | tech | employment | strategy
@@ -29,7 +29,7 @@ window.VHR_INSIGHTS = (function () {
       teaser: "Salary is only part of the number. A practical breakdown of total workforce cost for a 10-person engineering team.",
       teaserVi: "Lương chỉ là một phần. Bóc tách chi phí nhân sự tổng thể cho một đội kỹ thuật 10 người.",
       teaserJa: "給与はコストの一部にすぎません。10人のエンジニアチームにかかる総人件費を実務的に分解します。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2026-02-18",
       readMinutes: 9,
       cover: "01",
@@ -37,7 +37,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "vietnam-tech-salary-guide",
-      url: "insight-tech-team-cost.html",
+      url: "insight-vietnam-tech-salary.html",
       category: "tech",
       featured: true,
       title: "Vietnam Tech Salary Guide",
@@ -46,7 +46,7 @@ window.VHR_INSIGHTS = (function () {
       teaser: "Compensation ranges by role, seniority and location — and how to read them before you set a budget.",
       teaserVi: "Khoảng lương theo vị trí, cấp bậc và khu vực — và cách đọc dữ liệu trước khi chốt ngân sách.",
       teaserJa: "職種、経験レベル、地域別の報酬レンジと、予算を決める前にデータを読み解く方法を紹介します。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2026-01-30",
       readMinutes: 12,
       cover: "02",
@@ -54,7 +54,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "first-20-employees-in-vietnam",
-      url: "insight-tech-team-cost.html",
+      url: "insight-first-20-employees.html",
       category: "build",
       featured: true,
       title: "Your First 20 Employees in Vietnam: What Should the Organization Look Like?",
@@ -63,7 +63,7 @@ window.VHR_INSIGHTS = (function () {
       teaser: "The sequence of roles that keeps an early Vietnam team lean without creating gaps in capability.",
       teaserVi: "Thứ tự tuyển dụng giúp đội ngũ giai đoạn đầu gọn nhẹ mà không thiếu năng lực cốt lõi.",
       teaserJa: "初期のベトナムチームをスリムに保ちながら、必要な能力の不足を防ぐ採用順序を解説します。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2026-01-12",
       readMinutes: 8,
       cover: "03",
@@ -71,7 +71,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "hiring-engineers-in-vietnam",
-      url: "insight-tech-team-cost.html",
+      url: "insight-hiring-engineers-vietnam.html",
       category: "tech",
       featured: false,
       title: "Hiring Engineers in Vietnam: What Actually Moves Acceptance Rates",
@@ -80,14 +80,17 @@ window.VHR_INSIGHTS = (function () {
       teaser: "Interview speed, role clarity and total rewards matter more than brand recognition.",
       teaserVi: "Tốc độ phỏng vấn, sự rõ ràng của vị trí và tổng đãi ngộ quan trọng hơn độ nhận diện thương hiệu.",
       teaserJa: "面接の速さ、職務内容の明確さ、総合的な報酬は、知名度以上に重要です。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2025-12-08",
       readMinutes: 7,
-      cover: "04"
+      cover: "04",
+      image: "assets/img/insights/insight-hiring-engineers.jpg",
+      imageCredit: "Mizuno K. / Pexels",
+      imageSource: "https://www.pexels.com/photo/man-and-woman-talking-about-programming-12899168/"
     },
     {
       slug: "employment-basics-for-foreign-employers",
-      url: "insight-tech-team-cost.html",
+      url: "insight-employment-basics.html",
       category: "employment",
       featured: false,
       title: "Employment Basics Foreign Employers Ask About Most",
@@ -96,14 +99,17 @@ window.VHR_INSIGHTS = (function () {
       teaser: "Contracts, probation, social insurance and the operational habits that keep HR clean.",
       teaserVi: "Hợp đồng, thử việc, bảo hiểm xã hội và các thói quen vận hành giữ hồ sơ nhân sự sạch.",
       teaserJa: "契約、試用期間、社会保険、そして人事管理を適切に保つための実務習慣を解説します。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2025-11-20",
       readMinutes: 10,
-      cover: "05"
+      cover: "05",
+      image: "assets/img/insights/insight-employment-basics.jpg",
+      imageCredit: "Mikhail Nilov / Pexels",
+      imageSource: "https://www.pexels.com/photo/two-women-reading-a-document-in-the-office-8101499/"
     },
     {
       slug: "workforce-mix-permanent-remote-fractional",
-      url: "insight-tech-team-cost.html",
+      url: "insight-workforce-mix.html",
       category: "strategy",
       featured: false,
       title: "Permanent, Remote or Fractional? Choosing Your Workforce Mix",
@@ -112,10 +118,13 @@ window.VHR_INSIGHTS = (function () {
       teaser: "A decision framework for balancing cost, control and speed across a growing Vietnam team.",
       teaserVi: "Khung ra quyết định cân bằng chi phí, khả năng kiểm soát và tốc độ khi mở rộng đội ngũ.",
       teaserJa: "拡大するベトナムチームで、コスト、管理性、スピードのバランスを取るための判断フレームワークです。",
-      author: "ZHR Global Workforce Intelligence",
+      author: "ZHR Global HR Insights",
       date: "2025-10-29",
       readMinutes: 9,
-      cover: "06"
+      cover: "06",
+      image: "assets/img/insights/insight-workforce-mix.jpg",
+      imageCredit: "Karola G. / Pexels",
+      imageSource: "https://www.pexels.com/photo/group-of-people-having-a-discussion-7876895/"
     }
   ];
 
@@ -150,14 +159,35 @@ window.VHR_INSIGHTS = (function () {
       "</span></a>";
   }
 
+  function selectItems(limit, opts) {
+    var list = ITEMS.slice();
+    if (opts.excludeSlug) list = list.filter(function (i) { return i.slug !== opts.excludeSlug; });
+    if (opts.featured === true)  list = list.filter(function (i) { return i.featured; });
+    if (opts.featured === false) list = list.filter(function (i) { return !i.featured; });
+    if (opts.excludeTarget) {
+      var other = document.getElementById(opts.excludeTarget);
+      if (other) {
+        var shown = selectItems(Number(other.dataset.limit) || 0, targetOpts(other)).map(function (i) { return i.slug; });
+        list = list.filter(function (i) { return shown.indexOf(i.slug) === -1; });
+      }
+    }
+    return limit ? list.slice(0, limit) : list;
+  }
+
+  function targetOpts(t) {
+    return {
+      excludeSlug: t.dataset.exclude || undefined,
+      excludeTarget: t.dataset.excludeTarget || undefined,
+      featured: t.dataset.featured === "true" ? true : t.dataset.featured === "false" ? false : undefined,
+      feature: t.dataset.feature === "true"
+    };
+  }
+
   function renderInto(elId, limit, opts) {
     var el = document.getElementById(elId);
     if (!el) return;
     opts = opts || {};
-    var list = ITEMS.slice();
-    if (opts.featured === true)  list = list.filter(function (i) { return i.featured; });
-    if (opts.featured === false) list = list.filter(function (i) { return !i.featured; });
-    if (limit) list = list.slice(0, limit);
+    var list = selectItems(limit, opts);
     el.innerHTML = list.map(function (i) { return cardHTML(i, opts.feature); }).join("");
     el.querySelectorAll(".insight__cover img").forEach(function (img) {
       img.addEventListener("error", function () {
@@ -180,10 +210,7 @@ window.VHR_INSIGHTS = (function () {
   /* Vẽ lại khi đổi ngôn ngữ */
   document.addEventListener("vhr:lang", function () {
     document.querySelectorAll("[data-insights-target]").forEach(function (t) {
-      renderInto(t.id, Number(t.dataset.limit) || 0, {
-        featured: t.dataset.featured === "true" ? true : t.dataset.featured === "false" ? false : undefined,
-        feature: t.dataset.feature === "true"
-      });
+      renderInto(t.id, Number(t.dataset.limit) || 0, targetOpts(t));
     });
     renderFilters("insightFilters");
   });

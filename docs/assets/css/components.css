@@ -278,9 +278,9 @@
   transition: background var(--dur) var(--ease), padding-inline var(--dur) var(--ease);
 }
 .section--dark .value-item { border-bottom-color: var(--c-on-dark-line); }
-.value-item:hover { background: var(--c-paper-2); padding-inline: var(--space-4); }
-.section--dark .value-item:hover { background: #ffffff0a; }
-.value-item__num { font-family: var(--font-display); font-size: var(--text-label); font-weight: 700; letter-spacing: var(--track-label); color: var(--c-accent-deep); }
+.value-item:hover { background: var(--c-paper-2); padding-inline: var(--space-4); box-shadow: inset 3px 0 0 var(--c-accent); }
+.section--dark .value-item:hover { background: #ffffff0a; box-shadow: inset 3px 0 0 var(--c-accent-bright); }
+.value-item__num { font-family: var(--font-display); font-size: clamp(1.25rem, 1rem + 1.2vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--c-accent-deep); }
 .section--dark .value-item__num { color: var(--c-accent-bright); }
 .value-item__title { font-family: var(--font-display); font-weight: 600; font-size: var(--text-h4); color: var(--c-ink); }
 .section--dark .value-item__title { color: var(--c-on-dark); }

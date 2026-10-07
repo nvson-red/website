@@ -68,42 +68,52 @@
         </div>
       </div>
       <div>
-        <div class="hero__pillars">
-          <span class="hero__pillar" data-i18n="pillar.intel">Vietnam market expertise</span>
-          <span class="hero__pillar" data-i18n="pillar.senior">Strategic HR capability</span>
-          <span class="hero__pillar" data-i18n="pillar.exec">Practical execution</span>
-        </div>
+        <ul class="hero__pillars">
+          <li class="hero__pillar">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span data-i18n="pillar.intel">Vietnam market expertise</span>
+          </li>
+          <li class="hero__pillar">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-target"/></svg>
+            <span data-i18n="pillar.senior">Strategic HR capability</span>
+          </li>
+          <li class="hero__pillar">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hand"/></svg>
+            <span data-i18n="pillar.exec">Practical execution</span>
+          </li>
+        </ul>
         <p class="lead mt-6" data-i18n="home.hero.side">One local partner across the full workforce journey: understand the market, design the organization, hire the people, and run HR on the ground.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= TRUST BAR ================= -->
-<!-- TẠM ẨN theo review: chưa có logo khách hàng thật. Bỏ cặp comment này để bật lại. -->
-<!--
-<section class="trust" aria-labelledby="h-trust">
+<!-- ================= CREDIBILITY ================= -->
+<section class="section section--tight" aria-label="ZHR Global in numbers">
   <div class="wrap">
-    <p class="trust__label" id="h-trust" data-i18n="trust.label">Trusted by international companies building teams in Vietnam</p>
-    <div class="trust__row" data-reveal-group>
-      <span class="trust__logo" data-reveal>NORTHWIND</span>
-      <span class="trust__logo" data-reveal>ORBIT<span style="color:var(--c-accent)">·</span>LABS</span>
-      <span class="trust__logo" data-reveal>SAKURA CO.</span>
-      <span class="trust__logo" data-reveal>MERIDIAN</span>
-      <span class="trust__logo" data-reveal>K/O KAIGAI</span>
-      <span class="trust__logo" data-reveal>HELIX AI</span>
+    <div class="grid grid--3" data-reveal-group>
+      <div class="stat" data-reveal>
+        <div class="stat__value" data-i18n="cred.1.v">500<em>+</em></div>
+        <p class="stat__label" data-i18n="cred.1.l">Positions filled in Vietnam</p>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat__value" data-i18n="cred.2.v">40<em>+</em></div>
+        <p class="stat__label" data-i18n="cred.2.l">International companies served</p>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat__value" data-i18n="cred.3.v">8<em>+</em></div>
+        <p class="stat__label" data-i18n="cred.3.l">Years operating in Vietnam</p>
+      </div>
     </div>
-    <p class="form-note mt-6" style="text-align:center" data-i18n="trust.note">Logos are placeholders — thay bằng logo khách hàng thật khi có sẵn.</p>
   </div>
 </section>
--->
 
 <!-- ================= 01 — BUSINESS VALUE ================= -->
 <section class="section section--paper2" aria-labelledby="h-value">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow" data-i18n="home.label.01">01 — Business value</p>
+        <p class="eyebrow" data-i18n="home.label.01">Business value</p>
         <h2 id="h-value" data-i18n="home.value.h2">Build right, optimize costs, move faster</h2>
       </div>
       <p class="lead" data-i18n="home.value.lead">What difference does local expertise in Vietnam make?</p>
@@ -144,7 +154,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow" data-i18n="home.label.02">02 — Solutions</p>
+        <p class="eyebrow" data-i18n="home.label.02">Solutions</p>
         <h2 id="h-solutions" data-i18n="home.sol.h2">One partner — from strategy to execution</h2>
       </div>
       <p class="lead" data-i18n="home.sol.lead">Four capability groups covering the full workforce lifecycle. Use one, or use them end to end.</p>
@@ -198,34 +208,31 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow" data-i18n="home.label.03">03 — HR Insights</p>
-        <h2 id="h-intel" data-i18n="home.intel.h2">Vietnam Workforce Intelligence</h2>
+        <p class="eyebrow" data-i18n="home.label.03">HR Insights</p>
+        <h2 id="h-intel" data-i18n="home.intel.h2">HR Insights</h2>
       </div>
     </div>
     <div class="grid grid--3" id="homeInsights" data-insights-target data-limit="3" data-reveal-group></div>
     <div class="btn-row mt-7">
-      <a class="btn btn--ghost" href="workforce-intelligence.html"><span data-i18n="cta.exploreIntel">Explore Workforce Intelligence</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn--ghost" href="workforce-intelligence.html"><span data-i18n="cta.exploreIntel">Explore HR Insights</span><span class="btn__arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- ================= FINAL CTA ================= -->
-<section class="section section--tight cta-band">
+<!-- CTA:START -->
+<section class="section section--tight cta-band section--dark">
   <div class="wrap">
     <div class="split">
-      <div>
-        <p class="eyebrow" data-i18n="label.next">Next Step</p>
-        <h2 data-i18n="home.cta.h2">Planning to Build a Team in Vietnam?</h2>
-      </div>
+      <div><p class="eyebrow" data-i18n="label.next">Next step</p><h2 data-i18n="home.cta.h2">Planning to Build a Team in Vietnam?</h2></div>
       <div>
         <p class="lead" data-i18n="home.cta.lead">Tell us what you are planning. We'll help you understand the talent market, workforce cost and the practical way to build your team.</p>
-        <div class="btn-row mt-6">
-          <a class="btn btn--primary" href="talk-to-us.html"><span data-i18n="cta.talkExpert">Talk to a Vietnam HR Expert</span><span class="btn__arrow" aria-hidden="true">→</span></a>
-        </div>
+        <div class="btn-row mt-6"><a class="btn btn--primary" href="talk-to-us.html"><span data-i18n="cta.talkExpert">Talk to a Vietnam HR Expert</span><span class="btn__arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </div>
 </section>
+<!-- CTA:END -->
 
 <script src="data/insights.js"></script>
 <script>
@@ -242,7 +249,7 @@
   "url": "https://zhrone.com/",
   "description": "Vietnam workforce and HR partner for international companies building teams in Vietnam.",
   "areaServed": "VN",
-  "knowsAbout": ["Vietnam workforce intelligence", "Recruitment in Vietnam", "HR operations", "Salary benchmarking", "Organization design"]
+  "knowsAbout": ["Vietnam HR insights", "Recruitment in Vietnam", "HR operations", "Salary benchmarking", "Organization design"]
 }
 </script>
 </main>
@@ -255,7 +262,7 @@
           <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 4h22v4.6L12.2 24H27v4H5v-4.6L19.8 8H5V4Z" fill="currentColor"/></svg>
           <span class="brand__name" aria-hidden="true">HR<span>GLOBAL</span></span><span class="visually-hidden">ZHR Global</span>
         </a>
-        <p class="footer__tagline" data-i18n="footer.tagline">Your HR Partner in Vietnam. Vietnam workforce intelligence, senior HR expertise and hands-on execution.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Your HR Partner in Vietnam. Vietnam market expertise, strategic HR capability and practical execution.</p>
         <a class="btn btn--on-dark btn--sm mt-6" href="talk-to-us.html" data-i18n="cta.talk">Talk to Us</a>
       </div>
       <div>
