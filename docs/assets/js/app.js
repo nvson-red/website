@@ -71,23 +71,61 @@
     set("source_cta", params.get("cta") || "");
     set("submitted_at", new Date().toISOString());
 
+    /* Lấy câu thông báo theo ngôn ngữ đang chọn, mặc định là bản tiếng Anh trong HTML */
+    var t = function (key, fallback) {
+      var lang = document.documentElement.lang;
+      var dict = lang === "vi" ? window.VHR_VI : lang === "ja" ? window.VHR_JA : null;
+      return (dict && dict[key]) || fallback;
+    };
+
+    var say = function (status, kind, key, fallback) {
+      if (!status) return;
+      status.className = "form-status is-" + kind;
+      status.textContent = t(key, fallback);
+    };
+
     form.addEventListener("submit", function (e) {
       var status = document.getElementById("formStatus");
-      var endpoint = form.getAttribute("action");
+      var cfg = window.VHR_FORM;
 
-      /* Chưa nối endpoint thật -> không gửi đi, chỉ báo cho người dựng biết */
-      if (!endpoint || endpoint.indexOf("REPLACE_WITH") !== -1) {
+      /* Ô bẫy spam có chữ -> coi như đã gửi, không gửi đi thật */
+      if (form.company_website && form.company_website.value) {
         e.preventDefault();
-        if (status) {
-          status.className = "form-status is-err";
-          status.textContent = status.dataset.msgSetup;
-        }
+        say(status, "ok", "form.status.ok", status.dataset.msgOk);
         return;
       }
-      if (status) {
-        status.className = "form-status is-ok";
-        status.textContent = status.dataset.msgSending;
+
+      /* Gửi sang Apps Script để ghi xuống Google Sheet */
+      if (cfg && cfg.endpoint) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        say(status, "ok", "form.status.sending", status.dataset.msgSending);
+        set("submitted_at", new Date().toISOString());
+
+        /* no-cors: Apps Script không trả header CORS nên không đọc được phản hồi,
+           nhưng dữ liệu vẫn ghi xuống Sheet bình thường. */
+        fetch(cfg.endpoint, {
+          method: "POST",
+          mode: "no-cors",
+          body: new FormData(form)
+        }).then(function () {
+          form.reset();
+          say(status, "ok", "form.status.ok", status.dataset.msgOk);
+        }).catch(function () {
+          say(status, "err", "form.status.err", status.dataset.msgErr);
+        });
+        return;
       }
+
+      /* Chưa nối endpoint thật -> không gửi đi, chỉ báo cho người dựng biết */
+      var endpoint = form.getAttribute("action");
+      if (!endpoint || endpoint.indexOf("REPLACE_WITH") !== -1) {
+        e.preventDefault();
+        say(status, "err", "", status.dataset.msgSetup);
+        return;
+      }
+      say(status, "ok", "form.status.sending", status.dataset.msgSending);
     });
   }
 

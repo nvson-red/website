@@ -37,11 +37,13 @@ docs/
 ├── data/
 │   ├── vi.js                      Bản dịch tiếng Việt
 │   ├── ja.js                      Bản dịch tiếng Nhật
-│   └── insights.js                DANH SÁCH BÀI WORKFORCE INTELLIGENCE
+│   ├── insights.js                DANH SÁCH BÀI WORKFORCE INTELLIGENCE
+│   └── form-config.js             ĐƯỜNG DẪN NHẬN LEAD (xem mục 3)
 │
 └── tools/
     ├── build-layout.js            Đồng bộ header/footer vào mọi trang
-    └── check-i18n.js              Kiểm tra thiếu/thừa bản dịch
+    ├── check-i18n.js              Kiểm tra thiếu/thừa bản dịch
+    └── sheet-endpoint.gs          Script dán vào Google Sheet (xem mục 3)
 ```
 
 ---
@@ -99,26 +101,59 @@ rồi trỏ `url` của bài trong `insights.js` sang file đó.
 
 ---
 
-## 3. Nối form vào email
+## 3. Nối form vào Google Sheet
 
-Hiện `talk-to-us.html` có `action="REPLACE_WITH_YOUR_FORM_ENDPOINT"`.
-Khi chưa cấu hình, form không gửi đi mà hiện cảnh báo.
+Lead từ `talk-to-us.html` được gửi sang một Apps Script, script ghi thẳng xuống
+Google Sheet của bạn. Khi chưa cấu hình, form không gửi đi mà hiện cảnh báo.
 
-Chọn một trong ba cách:
+### Bước 1 — Cài script vào Sheet
 
-**Formspree** (nhanh nhất, có bản miễn phí)
-1. Tạo form tại formspree.io, lấy endpoint dạng `https://formspree.io/f/xxxxxxx`
-2. Dán vào thuộc tính `action` của thẻ `<form id="leadForm">`
+1. Mở Google Sheet sẽ chứa lead
+2. **Extensions → Apps Script**
+3. Xoá code mẫu, dán toàn bộ `tools/sheet-endpoint.gs` vào, bấm **Save**
+4. Muốn nhận email báo lead mới thì điền địa chỉ vào biến `EMAIL_BAO`
 
-**Google Apps Script + Google Sheet** (miễn phí, dữ liệu về Sheet của bạn)
-1. Tạo Google Sheet, vào Extensions → Apps Script
-2. Viết `doPost(e)` ghi `e.parameter` xuống Sheet và gửi `MailApp.sendEmail`
-3. Deploy as Web App, quyền "Anyone", dán URL vào `action`
+### Bước 2 — Deploy
 
-**API nội bộ** — dán URL endpoint của bạn vào `action`.
+**Deploy → New deployment → bánh răng → Web app**
 
-Form đã tự động gửi kèm: `source_page`, `source_cta`, `submitted_at`, và ô bẫy spam ẩn
-`company_website` (nếu ô này có giá trị thì đó là bot, hãy loại ở phía server).
+| Mục | Chọn |
+|-----|------|
+| Execute as | Me |
+| Who has access | **Anyone** |
+
+Bấm **Deploy**. Lần đầu Google hỏi quyền: **Advanced → Go to … → Allow**.
+
+Chép **Web app URL** (dạng `https://script.google.com/macros/s/.../exec`).
+
+### Bước 3 — Dán vào web
+
+Mở `data/form-config.js`, dán URL vào `endpoint`.
+
+### Bước 4 — Gửi thử
+
+Mở `talk-to-us.html`, điền và gửi một lead thử, rồi kiểm tra Sheet.
+Mở thẳng Web app URL trên trình duyệt sẽ thấy dòng "ZHR lead endpoint đang chạy"
+— dùng để biết đã deploy đúng chưa.
+
+### Cột trong Sheet
+
+Script tự tạo sheet tên `Leads` cùng hàng tiêu đề ở lần chạy đầu, gồm 14 cột từ
+**Thời điểm** đến **Nút đã bấm**. Cột riêng của bạn (trạng thái, người phụ trách,
+ghi chú…) hãy thêm về **bên phải** cột cuối cùng — script không đụng tới chúng.
+
+Muốn đổi tên hoặc thứ tự cột thì sửa mảng `COT` trong `tools/sheet-endpoint.gs`.
+
+### Những thứ đã xử lý sẵn
+
+- `source_page`, `source_cta`, `submitted_at` tự điền, không cần người dùng nhập
+- Ô bẫy spam ẩn `company_website`: nếu có giá trị thì script bỏ qua, coi như bot
+- Giá trị bắt đầu bằng `=` `+` `-` `@` được thêm dấu nháy để Sheets không coi là
+  công thức
+- `LockService` chặn hai lead gửi cùng lúc ghi đè lên nhau
+
+**Lưu ý:** mỗi lần sửa `sheet-endpoint.gs` phải deploy lại thì mới có hiệu lực
+(**Deploy → Manage deployments → bút chì → Version: New → Deploy**). URL giữ nguyên.
 
 ---
 
@@ -156,11 +191,11 @@ nội bộ nếu cần.
 
 ## 6. Trước khi lên production
 
-- [ ] Thay `zhrone.com` trong thẻ `<link rel="canonical">`, `og:url` của 9 trang, trong
+- [ ] Thay `zhr.vn` trong thẻ `<link rel="canonical">`, `og:url` của 9 trang, trong
       `robots.txt` và `sitemap.xml` bằng tên miền thật
 - [ ] Thay số liệu placeholder ở `hire-in-vietnam.html` (mục Why Vietnam) bằng số có nguồn
 - [ ] Thay bảng chi phí và mục Sources trong `insight-tech-team-cost.html`
-- [ ] Nối endpoint form và gửi thử một lead
+- [ ] Nối Google Sheet (data/form-config.js) và gửi thử một lead
 - [ ] Thay `hello@zhrone.com` và link LinkedIn bằng thông tin thật
 - [ ] Nhờ pháp chế duyệt `privacy.html`
 - [ ] Gắn Google Analytics 4 và Search Console, khai báo sitemap
