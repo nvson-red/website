@@ -269,7 +269,6 @@ window.VHR_VI = {
   "intel.hero.lead": "Thông tin chuyên môn thực dụng dành cho doanh nghiệp quốc tế đang xây dựng và vận hành đội ngũ tại Việt Nam.",
   "intel.featured.h2": "Bài nổi bật",
   "intel.latest.h2": "Bài mới nhất",
-  "intel.empty": "Chưa có bài trong danh mục này. Nội dung mới đang được biên soạn.",
   "intel.cta.h2": "Cần câu trả lời cho chính đội ngũ của bạn?",
   "intel.cta.lead": "Bài viết mang tính tổng quát. Vị trí, ngân sách và thời gian của bạn thì không. Cho chúng tôi biết cụ thể để nhận góc nhìn sát thực tế.",
 
@@ -350,7 +349,6 @@ window.VHR_VI = {
 
   /* ---------- PRIVACY ---------- */
   "privacy.h1": "Chính sách bảo mật &amp; Điều khoản",
-  "privacy.lead": "Bản nháp khung. Cần luật sư hoặc bộ phận pháp chế rà soát trước khi công bố.",
   "privacy.s1.h": "Chúng tôi thu thập gì",
   "privacy.s1.p": "Khi bạn gửi biểu mẫu, chúng tôi thu thập thông tin liên hệ và thông tin công ty bạn cung cấp, kèm trang bạn đến từ và nút kêu gọi bạn đã bấm. Dữ liệu chỉ dùng để phản hồi yêu cầu của bạn.",
   "privacy.s2.h": "Chúng tôi dùng như thế nào",
