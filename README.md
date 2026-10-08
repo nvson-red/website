@@ -40,10 +40,16 @@ docs/
 │   ├── insights.js                DANH SÁCH BÀI WORKFORCE INTELLIGENCE
 │   └── form-config.js             ĐƯỜNG DẪN NHẬN LEAD (xem mục 3)
 │
+└── data/ ...
+
+Ngoài docs/ (KHÔNG được publish lên web):
+├── README.md                      File này
 └── tools/
     ├── build-layout.js            Đồng bộ header/footer vào mọi trang
     ├── check-i18n.js              Kiểm tra thiếu/thừa bản dịch
     └── sheet-endpoint.gs          Script dán vào Google Sheet (xem mục 3)
+
+Mọi thứ trong docs/ đều công khai trên Internet. File nội bộ phải để ngoài.
 ```
 
 ---
@@ -68,13 +74,13 @@ Xóa key trong `vi.js` thì trang sẽ hiển thị lại bản tiếng Anh.
 
 Kiểm tra còn thiếu bản dịch nào không:
 ```bash
-node tools/check-i18n.js
+node ../tools/check-i18n.js
 ```
 
 ### Sửa menu hoặc footer
 Sửa `partials/header.html` hoặc `partials/footer.html`, rồi chạy:
 ```bash
-node tools/build-layout.js
+node ../tools/build-layout.js
 ```
 Lệnh này ghi header/footer mới vào cả 9 trang và tự đánh dấu mục đang xem.
 
@@ -110,7 +116,7 @@ Google Sheet của bạn. Khi chưa cấu hình, form không gửi đi mà hiệ
 
 1. Mở Google Sheet sẽ chứa lead
 2. **Extensions → Apps Script**
-3. Xoá code mẫu, dán toàn bộ `tools/sheet-endpoint.gs` vào, bấm **Save**
+3. Xoá code mẫu, dán toàn bộ `../tools/sheet-endpoint.gs` vào, bấm **Save**
 4. Muốn nhận email báo lead mới thì điền địa chỉ vào biến `EMAIL_BAO`
 
 ### Bước 2 — Deploy
@@ -142,7 +148,7 @@ Script tự tạo sheet tên `Leads` cùng hàng tiêu đề ở lần chạy đ
 **Thời điểm** đến **Nút đã bấm**. Cột riêng của bạn (trạng thái, người phụ trách,
 ghi chú…) hãy thêm về **bên phải** cột cuối cùng — script không đụng tới chúng.
 
-Muốn đổi tên hoặc thứ tự cột thì sửa mảng `COT` trong `tools/sheet-endpoint.gs`.
+Muốn đổi tên hoặc thứ tự cột thì sửa mảng `COT` trong `../tools/sheet-endpoint.gs`.
 
 ### Những thứ đã xử lý sẵn
 
