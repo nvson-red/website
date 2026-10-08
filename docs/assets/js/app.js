@@ -130,12 +130,12 @@
   }
 
   /* --- Gắn CTA nguồn vào mọi link dẫn tới form --- */
-  document.querySelectorAll('a[href^="talk-to-us.html"]').forEach(function (a) {
+  document.querySelectorAll('a[href^="/talk-to-us"]').forEach(function (a) {
     a.addEventListener("click", function () {
       var url = new URL(a.getAttribute("href"), window.location.href);
       if (!url.searchParams.get("cta")) url.searchParams.set("cta", (a.textContent || "").trim().slice(0, 60));
-      if (!url.searchParams.get("from")) url.searchParams.set("from", window.location.pathname.split("/").pop() || "index.html");
-      a.setAttribute("href", url.pathname.split("/").pop() + url.search + url.hash);
+      if (!url.searchParams.get("from")) url.searchParams.set("from", window.location.pathname || "/");
+      a.setAttribute("href", url.pathname + url.search + url.hash);
     });
   });
 })();

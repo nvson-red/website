@@ -202,7 +202,7 @@ nội bộ nếu cần.
 - [ ] Thay số liệu placeholder ở `hire-in-vietnam.html` (mục Why Vietnam) bằng số có nguồn
 - [ ] Thay bảng chi phí và mục Sources trong `insight-tech-team-cost.html`
 - [ ] Nối Google Sheet (data/form-config.js) và gửi thử một lead
-- [ ] Thay `hello@zhrone.com` và link LinkedIn bằng thông tin thật
+- [ ] Thay link LinkedIn bằng trang thật của công ty
 - [ ] Nhờ pháp chế duyệt `privacy.html`
 - [ ] Gắn Google Analytics 4 và Search Console, khai báo sitemap
 - [ ] Thay logo SVG trong `partials/header.html`, `partials/footer.html` và

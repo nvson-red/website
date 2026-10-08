@@ -20,7 +20,7 @@ window.VHR_INSIGHTS = (function () {
   var ITEMS = [
     {
       slug: "cost-to-build-a-tech-team-in-vietnam",
-      url: "insight-tech-team-cost.html",
+      url: "/insight-tech-team-cost",
       category: "salary",
       featured: true,
       title: "What Does It Really Cost to Build a Tech Team in Vietnam?",
@@ -37,7 +37,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "vietnam-tech-salary-guide",
-      url: "insight-vietnam-tech-salary.html",
+      url: "/insight-vietnam-tech-salary",
       category: "tech",
       featured: true,
       title: "Vietnam Tech Salary Guide",
@@ -54,7 +54,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "first-20-employees-in-vietnam",
-      url: "insight-first-20-employees.html",
+      url: "/insight-first-20-employees",
       category: "build",
       featured: true,
       title: "Your First 20 Employees in Vietnam: What Should the Organization Look Like?",
@@ -71,7 +71,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "hiring-engineers-in-vietnam",
-      url: "insight-hiring-engineers-vietnam.html",
+      url: "/insight-hiring-engineers-vietnam",
       category: "tech",
       featured: false,
       title: "Hiring Engineers in Vietnam: What Actually Moves Acceptance Rates",
@@ -90,7 +90,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "employment-basics-for-foreign-employers",
-      url: "insight-employment-basics.html",
+      url: "/insight-employment-basics",
       category: "employment",
       featured: false,
       title: "Employment Basics Foreign Employers Ask About Most",
@@ -109,7 +109,7 @@ window.VHR_INSIGHTS = (function () {
     },
     {
       slug: "workforce-mix-permanent-remote-fractional",
-      url: "insight-workforce-mix.html",
+      url: "/insight-workforce-mix",
       category: "strategy",
       featured: false,
       title: "Permanent, Remote or Fractional? Choosing Your Workforce Mix",
