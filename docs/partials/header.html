@@ -21,6 +21,8 @@
   </div>
 </header>
 <!-- Nút chuyển ngôn ngữ tách khỏi header, cố định ở góc dưới bên phải để menu không giật khi đổi ngôn ngữ -->
+<!-- Không có JS thì nút đổi ngôn ngữ không hoạt động, lại che mất đáy trang -> ẩn luôn -->
+<noscript><style>.lang-float{display:none}</style></noscript>
 <div class="lang-float" role="group" aria-label="Language">
   <button type="button" data-lang="en" aria-pressed="true">EN</button>
   <button type="button" data-lang="vi" aria-pressed="false">VI</button>

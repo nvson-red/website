@@ -565,7 +565,8 @@ html[lang="vi"] .nav__link { font-size: 0.84rem; }
               0 2px 6px rgba(7, 26, 43, 0.06);
   backdrop-filter: saturate(1.2);
   gap: 2px;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+              opacity var(--dur) var(--ease);
 }
 .lang-float:hover {
   transform: translateY(-2px);
@@ -603,5 +604,19 @@ html[lang="vi"] .nav__link { font-size: 0.84rem; }
   .lang-float button { min-width: 30px; height: 26px; padding: 0 9px; font-size: 10px; }
 }
 
+/* Nhường chỗ khi cuộn tới đáy: tránh che dòng bản quyền và link Chính sách.
+   Lớp is-at-footer do app.js gắn khi dải cuối footer lọt vào khung nhìn. */
+body.is-at-footer .lang-float,
+body.is-at-footer .back-top {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+/* Dự phòng khi JS chưa chạy: chừa khoảng trống dưới footer trên màn hình hẹp */
+@media (max-width: 768px) {
+  .site-footer { padding-bottom: calc(var(--space-6) + 56px); }
+}
+
 /* Không in ra khi print */
-@media print { .lang-float { display: none !important; } }
+@media print { .lang-float, .back-top { display: none !important; } }
