@@ -57,9 +57,12 @@
 .link-arrow:hover { background-size: 100% 1px; }
 .section--dark .link-arrow { color: var(--c-accent-bright); }
 
-/* ---------- Header -------------------------------------- */
+/* ---------- Header --------------------------------------
+   position:fixed chứ không sticky: header co lại khi cuộn, nếu nằm trong
+   luồng layout thì đổi chiều cao sẽ đẩy nội dung và kéo scrollY đổi theo,
+   gây bật tắt class liên hồi. Chỗ trống do body padding-top giữ. */
 .site-header {
-  position: sticky; top: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: var(--header-h);
   display: flex; align-items: center;
   background: rgba(251, 250, 248, 0.86);
@@ -152,6 +155,12 @@
     max-height: calc(100dvh - var(--header-h)); overflow-y: auto;
   }
   .nav.is-open { transform: none; opacity: 1; pointer-events: auto; }
+  /* Header co lại khi cuộn -> menu phải bám theo, nếu không sẽ hở một dải
+     và phần cuối menu bị đẩy quá đáy màn hình. */
+  .site-header.is-stuck .nav {
+    top: var(--header-h-stuck);
+    max-height: calc(100dvh - var(--header-h-stuck));
+  }
   .nav__link { padding: 14px 0; border-bottom: 1px solid var(--c-line); font-size: 1.05rem; }
   .nav__link::after { display: none; }
   .header__actions .btn { display: none; }

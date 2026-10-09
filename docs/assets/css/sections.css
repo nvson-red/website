@@ -320,17 +320,18 @@
 [data-reveal="scale"] { opacity: 0; transform: scale(0.96); }
 [data-reveal].is-visible { opacity: 1; transform: none; filter: none; }
 
-/* Cảm giác "settle" khi cuộn: chỉ đổi viền và bóng đổ.
-   KHÔNG đổi chiều cao header. Header là position:sticky nên nằm trong luồng
-   layout; đổi chiều cao làm nội dung bên dưới dịch theo, kéo scrollY đổi,
-   vượt lại ngưỡng bật/tắt class — gây giật liên hồi quanh đỉnh trang. */
+/* Header co lại nhẹ khi cuộn xuống — cảm giác "settle".
+   Chỉ an toàn vì header là position:fixed (xem components.css): nó đã ra
+   khỏi luồng layout nên đổi chiều cao không đẩy nội dung bên dưới. */
 .site-header {
   transition:
+    height var(--dur) var(--ease),
     border-color var(--dur) var(--ease),
     background var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
 }
 .site-header.is-stuck {
+  height: var(--header-h-stuck);
   box-shadow: 0 6px 22px -18px rgba(7, 26, 43, 0.35);
 }
 

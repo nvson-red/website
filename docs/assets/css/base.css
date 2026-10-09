@@ -11,6 +11,9 @@ html {
 
 body {
   margin: 0;
+  /* Giữ chỗ cho header fixed. Luôn bằng chiều cao lúc chưa co,
+     nên header co lại không làm xê dịch nội dung. */
+  padding-top: var(--header-h);
   background: var(--c-paper);
   color: var(--c-text);
   font-family: var(--font-body);
