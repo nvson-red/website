@@ -320,16 +320,17 @@
 [data-reveal="scale"] { opacity: 0; transform: scale(0.96); }
 [data-reveal].is-visible { opacity: 1; transform: none; filter: none; }
 
-/* Header co lại nhẹ khi cuộn xuống — cảm giác "settle" chuyên nghiệp */
+/* Cảm giác "settle" khi cuộn: chỉ đổi viền và bóng đổ.
+   KHÔNG đổi chiều cao header. Header là position:sticky nên nằm trong luồng
+   layout; đổi chiều cao làm nội dung bên dưới dịch theo, kéo scrollY đổi,
+   vượt lại ngưỡng bật/tắt class — gây giật liên hồi quanh đỉnh trang. */
 .site-header {
   transition:
-    height var(--dur) var(--ease),
     border-color var(--dur) var(--ease),
     background var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
 }
 .site-header.is-stuck {
-  height: 60px;
   box-shadow: 0 6px 22px -18px rgba(7, 26, 43, 0.35);
 }
 
