@@ -604,18 +604,11 @@ html[lang="vi"] .nav__link { font-size: 0.84rem; }
   .lang-float button { min-width: 30px; height: 26px; padding: 0 9px; font-size: 10px; }
 }
 
-/* Nhường chỗ khi cuộn tới đáy: tránh che dòng bản quyền và link Chính sách.
-   Lớp is-at-footer do app.js gắn khi dải cuối footer lọt vào khung nhìn. */
-body.is-at-footer .lang-float,
-body.is-at-footer .back-top {
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-}
-
-/* Dự phòng khi JS chưa chạy: chừa khoảng trống dưới footer trên màn hình hẹp */
-@media (max-width: 768px) {
-  .site-footer { padding-bottom: calc(var(--space-6) + 56px); }
+/* Chừa chỗ cho hai nút nổi ở đáy khung nhìn, nếu không chúng che mất dòng
+   bản quyền và link Chính sách bảo mật khi cuộn hết trang.
+   = khoảng cách mép dưới + chiều cao nút cao nhất (back-top 42px) + khe hở. */
+.site-footer {
+  padding-bottom: calc(var(--space-6) + clamp(16px, 2.4vw, 32px) + 42px + 12px);
 }
 
 /* Không in ra khi print */

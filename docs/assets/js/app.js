@@ -193,15 +193,4 @@
   var onScrollTop = function () { top.classList.toggle("is-visible", window.scrollY > 600); };
   onScrollTop();
   window.addEventListener("scroll", onScrollTop, { passive: true });
-
-  /* --- Nhường chỗ cho đáy trang ---
-     Nút ngôn ngữ và nút về đầu trang đều position:fixed nên che mất dòng bản
-     quyền và link Chính sách khi cuộn hết. Ẩn cả hai khi dải cuối footer lọt
-     vào khung nhìn, hiện lại ngay khi cuộn lên. */
-  var footerBottom = document.querySelector(".footer__bottom");
-  if (footerBottom && "IntersectionObserver" in window) {
-    new IntersectionObserver(function (entries) {
-      document.body.classList.toggle("is-at-footer", entries[0].isIntersecting);
-    }, { rootMargin: "0px 0px -8px 0px" }).observe(footerBottom);
-  }
 })();
