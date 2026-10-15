@@ -19,6 +19,10 @@
    thì thay đổi mới có hiệu lực.
    ========================================================= */
 
+/* Dấu hiệu nhận dạng bản code. Mở Web app URL trên trình duyệt sẽ thấy dòng này,
+   nhờ đó biết Google đang chạy bản nào — rất hữu ích khi nghi deploy chưa ăn. */
+var PHIEN_BAN = "2026-10-15-b";
+
 /* Điền email để nhận báo lead mới. Để rỗng nếu không cần. */
 var EMAIL_BAO = "solution@zhr.vn";
 
@@ -84,8 +88,15 @@ function doPost(e) {
 
 /* Mở trực tiếp URL trên trình duyệt sẽ chạy hàm này — dùng để kiểm tra đã deploy đúng chưa */
 function doGet() {
+  var tin = [
+    "ZHR lead endpoint đang chạy.",
+    "Phiên bản code: " + PHIEN_BAN,
+    "Mail báo: " + (EMAIL_BAO || "(đang tắt)"),
+    "Tab ghi vào: " + TEN_SHEET
+  ].join("\n");
+
   return ContentService
-    .createTextOutput("ZHR lead endpoint đang chạy.")
+    .createTextOutput(tin)
     .setMimeType(ContentService.MimeType.TEXT);
 }
 
