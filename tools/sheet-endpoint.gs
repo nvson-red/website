@@ -20,7 +20,7 @@
    ========================================================= */
 
 /* Điền email để nhận báo lead mới. Để rỗng nếu không cần. */
-var EMAIL_BAO = "";
+var EMAIL_BAO = "solution@zhr.vn";
 
 /* Tên sheet sẽ ghi vào. Script tự tạo nếu chưa có. */
 var TEN_SHEET = "Leads";
